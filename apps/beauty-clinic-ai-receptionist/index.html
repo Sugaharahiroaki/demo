@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI音声受付デモ | Bloom Aesthetics Clinic</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">B</span>
+    <div>
+      <div class="brand-name">Bloom Aesthetics Clinic</div>
+      <div class="brand-sub">AI音声受付デモアプリ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="patient" role="tab" aria-selected="true">来院希望の方向け</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">受付・カウンセラー向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: PATIENT VIEW ============ -->
+  <section id="view-patient" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">24時間365日 AI電話受付</p>
+        <h1>電話一本で、今すぐご予約を。<br>夜でも週末でも、待たせません。</h1>
+        <p class="lede">複数院どこでも、空き状況をその場で確認。無理な勧誘は一切なし、AIがやんわり丁寧にご案内します。答えられない内容は、必ず人のスタッフが引き継ぎます。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">24h</span><span class="trust-label">いつでも対応</span></div>
+          <div class="trust-item"><span class="trust-num">4</span><span class="trust-label">院から選べる</span></div>
+          <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">迷う内容は有人対応</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-glow"></div>
+          <svg viewBox="0 0 24 24" class="phone-icon"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="患者様の声">
+      <div class="testimonial-card">
+        <p>“夜21時に電話したのに、すぐ予約が取れて驚きました。”</p>
+        <span>— 30代 女性・会員歴2年</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“複数の院の空き状況をその場で比較してもらえたのが便利。”</p>
+        <span>— 40代 女性・新規来院</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“込み入った相談は、ちゃんとスタッフさんが折り返してくれました。”</p>
+        <span>— 20代 女性・会員歴1年</span>
+      </div>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-panel-head">
+        <h2>AI受付を体験してみる</h2>
+        <p>下のボックスにご希望を入力してみてください（例：「ボトックスの予約をしたい」「土曜の午後は空いてますか」）。これは体験用のシミュレーションです。</p>
+      </div>
+
+      <div class="call-widget">
+        <div class="call-widget-head">
+          <span class="call-dot"></span>
+          <span>Bloom AI受付 — 通話中</span>
+        </div>
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <form id="chatForm" class="chat-input-row">
+          <input id="chatInput" type="text" placeholder="ご希望を入力（例：ボトックスの予約をしたい）" autocomplete="off">
+          <button type="submit">送信</button>
+        </form>
+        <div class="quick-replies">
+          <button type="button" class="quick" data-msg="ボトックスの予約をしたい">ボトックスの予約をしたい</button>
+          <button type="button" class="quick" data-msg="土曜の午後は空いてますか">土曜の午後は空いてますか</button>
+          <button type="button" class="quick" data-msg="予約を変更したい">予約を変更したい</button>
+          <button type="button" class="quick" data-msg="料金についてもっと詳しく相談したい">料金について詳しく相談したい</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>ご予約までの流れ</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span>お電話（またはチャット）でご希望を伝える</li>
+        <li><span class="step-num">2</span>AIが希望メニューと空き状況を院ごとに確認</li>
+        <li><span class="step-num">3</span>その場で予約を確定・変更・キャンセル</li>
+        <li><span class="step-num">4</span>込み入ったご相談は人のスタッフが折り返し</li>
+      </ol>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: STAFF / COUNSELOR VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">スタッフ向けダッシュボード</p>
+        <h1>今日のAI受付状況</h1>
+        <p class="lede">合間にサッと確認できるように、数字と対応待ちだけをまとめました。</p>
+      </div>
+      <div class="staff-refresh">最終更新：たった今</div>
+    </section>
+
+    <section class="stat-grid">
+      <div class="stat-tile">
+        <span class="stat-label">本日のAI対応件数</span>
+        <span class="stat-value">128<span class="stat-unit">件</span></span>
+        <span class="stat-delta up">前日比 +12%</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-label">AIのみで完結</span>
+        <span class="stat-value">96<span class="stat-unit">件</span></span>
+        <span class="stat-delta">全体の 75%</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-label">人へエスカレーション</span>
+        <span class="stat-value">32<span class="stat-unit">件</span></span>
+        <span class="stat-delta">全体の 25%</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-label">防いだダブルブッキング</span>
+        <span class="stat-value">7<span class="stat-unit">件</span></span>
+        <span class="stat-delta up">今週 +3件</span>
+      </div>
+    </section>
+
+    <section class="staff-columns">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>時間帯別の着信</h2>
+          <span class="panel-note">営業時間外（夜間・週末）も取りこぼしなし</span>
+        </div>
+        <div class="bars" id="hourBars"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>対応が必要なエスカレーション</h2>
+          <span class="panel-note">AIが判断を保留した案件のみ表示</span>
+        </div>
+        <ul class="escalation-list" id="escalationList"></ul>
+      </div>
+    </section>
+
+    <section class="panel queue-panel">
+      <div class="panel-head">
+        <h2>直近の通話ログ</h2>
+        <span class="panel-note">院ごとの対応状況</span>
+      </div>
+      <div class="table-wrap">
+        <table class="queue-table">
+          <thead>
+            <tr><th>時刻</th><th>院</th><th>用件</th><th>結果</th><th>状態</th></tr>
+          </thead>
+          <tbody id="queueBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、複数拠点展開の美容クリニックにおけるAI音声受付導入事例（米国・出典: Flipbytes社ケーススタディ）をもとに構成した架空のシミュレーションです。クリニック名・登場人物・数値はすべて仮のものです。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
