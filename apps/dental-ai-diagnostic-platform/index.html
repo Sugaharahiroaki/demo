@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VideaAI 導入デモ | Beacon Dental Group</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">B</span>
+    <div>
+      <div class="brand-name">Beacon Dental Group</div>
+      <div class="brand-sub">歯科AI画像診断アシスト「VideaAI」導入デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="director" role="tab" aria-selected="true">院長・経営層向け</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">受付・歯科衛生士向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: DIRECTOR / MANAGEMENT VIEW ============ -->
+  <section id="view-director" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">米国210医院デンタルグループの導入事例をもとにしたデモ</p>
+        <h1>210医院への全社導入を、<br>わずか2週間で。</h1>
+        <p class="lede">大規模組織全体で一貫した診断品質とアクセスを確保する——それがこの導入の出発点でした。既存の診療管理システム「Trinity」とレントゲン画像環境にAIを組み込み、多店舗展開でも短期間で体制を整えています。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">210</span><span class="trust-label">導入医院数</span></div>
+          <div class="trust-item"><span class="trust-num">2週間</span><span class="trust-label">全社導入に要した期間</span></div>
+          <div class="trust-item"><span class="trust-num">Trinity</span><span class="trust-label">既存システムと統合</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring-frame">
+          <div class="ring-glow"></div>
+          <svg viewBox="0 0 24 24" class="ring-icon"><path d="M12 2C8.1 2 5 5.1 5 9c0 3.2 2.1 5.9 5 6.7V19c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3.3c2.9-.8 5-3.5 5-6.7 0-3.9-3.1-7-7-7zm0 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zm-1 3v4h2V9.5l1.5 1.5 1.4-1.4L12 6.7 8.1 10.6l1.4 1.4L11 10.5V9z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel known-panel">
+      <div class="panel-head">
+        <h2>この事例で分かっていること／非公開のこと</h2>
+      </div>
+      <div class="known-grid">
+        <div class="known-col known-yes">
+          <span class="known-col-title">✓ 分かっている事実</span>
+          <ul>
+            <li>210医院への全社導入が2週間で完了</li>
+            <li>既存の診療管理システム「Trinity」と画像環境に統合</li>
+            <li>臨床の一貫性・患者信頼が向上したと報告</li>
+          </ul>
+        </div>
+        <div class="known-col known-no">
+          <span class="known-col-title">— 非公開の情報</span>
+          <ul>
+            <li>時間削減・コスト削減の具体的な数値</li>
+            <li>売上・成約率への影響の数値</li>
+          </ul>
+          <p class="known-note">本デモでは、ない数字を作らず、公開されている事実だけでご判断いただけるように構成しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel challenge-panel">
+      <h2>導入前の課題</h2>
+      <p><strong>拠点が増えるほど、医師ごとの経験差で診断の質にばらつきが出やすくなります。</strong>利益率の圧迫と臨床の複雑化が同時に進む中、「どの医院で受診しても同じ水準の診断」を組織全体で維持できるかが課題でした。</p>
+    </section>
+
+    <section class="panel speed-sim">
+      <div class="panel-head">
+        <h2>導入スピード シミュレーター</h2>
+        <span class="panel-note">実績値をもとにした概算</span>
+      </div>
+      <p class="sim-desc">海外の大手デンタルグループ（210医院）の実績では、全社導入がわずか2週間で完了しました。この導入ペースをもとに、貴グループの医院数を入力すると目安の導入期間を試算します。</p>
+      <div class="sim-controls">
+        <label for="clinicInput">医院数</label>
+        <input type="range" id="clinicRange" min="1" max="500" value="210" step="1">
+        <input type="number" id="clinicInput" min="1" max="2000" value="210">
+        <span class="sim-unit">医院</span>
+      </div>
+      <div class="sim-result">
+        <span class="sim-result-label">目安の全社導入期間</span>
+        <span class="sim-result-value" id="simWeeks">2週間</span>
+      </div>
+      <p class="sim-caveat">※ 海外の導入事例（210医院／2週間）をもとにした参考値です。医院数と導入期間が比例すると仮定した概算であり、システム環境や体制により実際の期間は変動します。</p>
+    </section>
+
+    <section class="panel consistency-panel">
+      <div class="panel-head">
+        <h2>診断の一貫性 Before / After（イメージ）</h2>
+        <span class="panel-note">概念図・実測値ではありません</span>
+      </div>
+      <p class="sim-desc">VideaAIケースで語られているのは「臨床の一貫性・患者信頼の向上」です。具体的な測定数値は公表されていないため、下図は医師ごとの所見のばらつきがAI導入によって狭まるイメージを模式的に示したものです。</p>
+      <div class="consistency-chart" id="consistencyChart" aria-hidden="true"></div>
+      <div class="consistency-legend">
+        <span><i class="dot before"></i>導入前：医師ごとに所見の幅が広い（イメージ）</span>
+        <span><i class="dot after"></i>導入後：AIアシストにより所見の基準がそろう（イメージ）</span>
+      </div>
+    </section>
+
+    <section class="outcomes-grid">
+      <div class="outcome-card">
+        <span class="outcome-icon">🦷</span>
+        <h3>臨床の一貫性向上</h3>
+        <p>どの医院・どの医師が担当しても、AIが同じ基準でレントゲンを一次チェック。組織全体で診断品質の底上げにつながります。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">🤝</span>
+        <h3>患者信頼の向上</h3>
+        <p>AI所見をもとに、画像を示しながら分かりやすく説明できるため、患者様が治療方針に納得しやすくなります。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">🏥</span>
+        <h3>システムレベルの医師支援</h3>
+        <p>個々の医師の経験に依存せず、組織として医師を支える仕組みを構築。210医院という規模でも短期間で展開できました。</p>
+      </div>
+    </section>
+
+    <section class="quote-panel">
+      <blockquote>
+        “拠点が増えるほど「この医院は診断が丁寧」「あの医院は少し粗い」という差が気になっていました。AIが全医院で同じ基準の一次チェックをしてくれることで、経営として安心して拠点展開できる土台ができたと感じています。”
+      </blockquote>
+      <span class="quote-attr">— 院長（デモ用の想定コメントです）</span>
+    </section>
+
+    <section class="panel safety-panel">
+      <h2>安全性・臨床上の位置づけについて</h2>
+      <ul class="safety-list">
+        <li>VideaAIはレントゲン画像に対する<strong>臨床アシスト情報の提示</strong>を行うものであり、最終的な診断・治療方針の決定は必ず歯科医師が行います。</li>
+        <li>既存の診療管理システム「Trinity」および画像環境と統合する形で導入するため、業務フローを大きく変えずに利用を開始できます。</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: FRONT DESK / DENTAL HYGIENIST VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">現場スタッフ向けプロダクト体験</p>
+        <h1>VideaAIで、毎日の画像チェックがどう変わるか</h1>
+        <p class="lede">操作が難しい専門ツールではありません。レントゲンをアップロードすると、AIが所見の候補を一覧で示してくれるので、歯科医師の確認・患者様へのご説明がスムーズになります。下の画面を実際に操作して体験してみてください。</p>
+      </div>
+    </section>
+
+    <nav class="screen-switch" role="tablist" aria-label="画面切替">
+      <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="screen-tab" data-screen="analysis" role="tab" aria-selected="false">レントゲン解析</button>
+      <button class="screen-tab" data-screen="settings" role="tab" aria-selected="false">設定</button>
+    </nav>
+
+    <!-- ---- STAFF: HOME ---- -->
+    <section id="staff-home" class="staff-screen active">
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">AI解析待ちの画像</span>
+          <span class="stat-value" id="statPending">3<span class="stat-unit">件</span></span>
+          <span class="stat-delta">アップロードするとすぐ解析されます</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">歯科医師レビュー待ち</span>
+          <span class="stat-value" id="statReview">2<span class="stat-unit">件</span></span>
+          <span class="stat-delta">AI所見の確認をお願いしています</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">患者様へのご説明準備完了</span>
+          <span class="stat-value" id="statReady">1<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">説明用メモも自動で用意されます</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>この画面で変わること</h2>
+          <span class="panel-note">受付・歯科衛生士の皆さまへ</span>
+        </div>
+        <ol class="steps-vertical">
+          <li><span class="step-num">1</span><div><strong>レントゲン画像をアップロード</strong>する — 今まで通り撮影した画像を、この画面から取り込みます。</div></li>
+          <li><span class="step-num">2</span><div><strong>AI所見を確認</strong>する — 数十秒ほどで、画像上に気になる箇所の候補が表示されます。</div></li>
+          <li><span class="step-num">3</span><div><strong>歯科医師がレビュー</strong>する — 最終判断は必ず歯科医師が行います。皆さまは進捗を確認するだけでOKです。</div></li>
+          <li><span class="step-num">4</span><div><strong>患者様にご説明</strong>する — 平易な言葉に置き換えた説明メモを使って、安心してご案内いただけます。</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: ANALYSIS ---- -->
+    <section id="staff-analysis" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>患者ケースを選ぶ</h2>
+          <span class="panel-note">デモ用の仮想ケースです</span>
+        </div>
+        <div class="case-picker" id="casePicker">
+          <button type="button" class="case-btn active" data-case="a">患者A（40代）</button>
+          <button type="button" class="case-btn" data-case="b">患者B（60代）</button>
+          <button type="button" class="case-btn" data-case="c">患者C（20代）</button>
+        </div>
+      </div>
+
+      <div class="analysis-layout">
+        <div class="panel xray-panel">
+          <div class="panel-head">
+            <h2>レントゲン画像</h2>
+            <span class="panel-note" id="xrayStatus">未アップロード</span>
+          </div>
+          <div class="xray-frame" id="xrayFrame">
+            <div class="xray-placeholder" id="xrayPlaceholder">
+              <svg viewBox="0 0 24 24" class="upload-icon"><path d="M12 3l5 5h-3v6h-4V8H7l5-5zM5 19h14v2H5v-2z"/></svg>
+              <p>まだ画像がアップロードされていません</p>
+              <button type="button" class="btn-primary" id="uploadBtn">レントゲン画像をアップロード</button>
+            </div>
+            <div class="xray-view" id="xrayView" hidden>
+              <svg viewBox="0 0 320 160" class="xray-svg" id="xraySvg" aria-label="レントゲン画像のイメージ図">
+                <rect x="0" y="0" width="320" height="160" fill="#0b1f2e"></rect>
+                <g id="toothRow" fill="#cfe3ee" opacity="0.9"></g>
+                <g id="findingMarkers"></g>
+              </svg>
+              <button type="button" class="btn-secondary" id="analyzeBtn">AI所見を確認</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel findings-panel">
+          <div class="panel-head">
+            <h2>AI所見（臨床アシスト情報）</h2>
+            <span class="panel-note">最終判断は歯科医師が行います</span>
+          </div>
+          <p class="reassure-note">専門用語が並びますが、覚える必要はありません。歯科医師の確認が済むと、下に患者様への説明メモが自動で用意されます。万一AIの所見が的外れでも、必ず歯科医師の確認を経てからご案内するため、そのまま患者様に伝わることはありません。</p>
+          <ul class="findings-list" id="findingsList">
+            <li class="findings-empty">画像をアップロードし「AI所見を確認」を押すと、ここに候補が表示されます。</li>
+          </ul>
+
+          <div class="review-row" id="reviewRow" hidden>
+            <button type="button" class="btn-secondary" id="reviewBtn">歯科医師レビュー完了としてマーク（デモ）</button>
+            <span class="review-status" id="reviewStatus"></span>
+          </div>
+
+          <div class="patient-note" id="patientNote" hidden>
+            <div class="panel-head">
+              <h3>患者様説明用メモ（平易な言葉に変換済み）</h3>
+            </div>
+            <p id="patientNoteText"></p>
+            <button type="button" class="btn-ghost" id="copyNoteBtn">このメモをコピー</button>
+            <span class="copy-feedback" id="copyFeedback"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: SETTINGS ---- -->
+    <section id="staff-settings" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>医院ごとの導入設定</h2>
+          <span class="panel-note">見た目の操作のみ（デモ）</span>
+        </div>
+        <p class="reassure-note">通常はグループ本部・医院責任者が設定する画面です。受付・歯科衛生士の皆さまが日常的に触れる場面は多くありません。</p>
+        <div class="table-wrap">
+          <table class="settings-table">
+            <thead>
+              <tr><th>医院</th><th>VideaAI連携</th><th>Trinity連携</th><th>状態</th></tr>
+            </thead>
+            <tbody id="clinicSettingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>通知設定</h2>
+          <span class="panel-note">受付・歯科衛生士向け</span>
+        </div>
+        <ul class="toggle-list">
+          <li>
+            <div><strong>AI所見の候補が出たら通知</strong><span class="toggle-desc">解析が終わったタイミングでお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleFindings"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>歯科医師レビュー完了を通知</strong><span class="toggle-desc">患者様へのご説明準備が整ったらお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleReview"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>Trinity連携エラーを通知</strong><span class="toggle-desc">診療管理システムとの連携に問題があれば即時にお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleError"><span class="slider"></span></label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、大規模デンタルグループにおけるAI画像診断アシスト導入事例（米国・VideaAIケーススタディ）をもとに構成した架空のシミュレーションです。登場する企業名「Beacon Dental Group」・人物・患者ケース・画面上の数値はすべて仮のものであり、実在の組織・個人とは関係ありません。時間削減・コスト削減・売上改善に関する具体的な数値は元事例で公表されていないため、本デモでは記載していません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

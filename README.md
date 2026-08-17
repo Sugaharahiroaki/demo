@@ -9,3 +9,5 @@
 | デモ | 業種 | 元事例 |
 | --- | --- | --- |
 | [apps/beauty-clinic-ai-receptionist](apps/beauty-clinic-ai-receptionist) | 美容クリニック | 複数拠点美容クリニック（米国／Flipbytes）－AI音声受付で24時間予約対応 |
+| [apps/dental-ai-diagnostic-platform](apps/dental-ai-diagnostic-platform) | 病院関係（歯科） | 大手デンタルDSO（米国／VideaAI）－歯科AI診断支援プラットフォームを210医院に2週間で全社導入 |
+| [apps/legal-document-ai-drafting](apps/legal-document-ai-drafting) | 税理士・社労士・法律事務所 | 法律事務所（米国／内製AIツール）－定型文書作成AIで申立書作成時間を4分の1に短縮 |

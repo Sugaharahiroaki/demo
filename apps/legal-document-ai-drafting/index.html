@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クイックドラフトAI デモ | 弁護士法人 桜坂総合法律事務所</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">桜坂</span>
+    <div>
+      <div class="brand-name">弁護士法人 桜坂総合法律事務所</div>
+      <div class="brand-sub">定型文書作成AI「クイックドラフト」デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="client" role="tab" aria-selected="true">顧問先の経営者の方</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">事務所スタッフの方</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: CLIENT / OWNER VIEW ============ -->
+  <section id="view-client" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">顧問先企業の皆さまへ</p>
+        <h1>専門性はそのままに、<br>ご相談へのお応えがもっと早くなりました。</h1>
+        <p class="lede">当事務所では、委任状・契約書・申立書などの定型書類の作成をAIが補助する仕組みを整えました。書類準備の時間が減った分、弁護士は御社のご相談・戦略のご相談によりじっくり時間を割けるようになっています。作成された書類は、必ず担当弁護士が内容を確認してからお渡しします。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">1/4</span><span class="trust-label">書類の作成時間</span></div>
+          <div class="trust-item"><span class="trust-num">+10%</span><span class="trust-label">ご相談対応できる件数</span></div>
+          <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">弁護士による内容確認</span></div>
+        </div>
+        <p class="hero-source-note">※海外の同種事務所における導入実績データに基づく目安です。詳しい根拠は本ページ下部でご説明しています。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="doc-frame">
+          <div class="doc-glow"></div>
+          <svg viewBox="0 0 24 24" class="doc-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L18.5 9H14V4.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5zM8 9.5h3V11H8V9.5z"/></svg>
+        </div>
+        <div class="minibar-card">
+          <p class="minibar-title">委任状1件あたりの作成時間</p>
+          <div class="minibar-row">
+            <span class="minibar-label">導入前</span>
+            <div class="minibar-track"><div class="minibar-fill before"></div></div>
+            <span class="minibar-num">25分</span>
+          </div>
+          <div class="minibar-row">
+            <span class="minibar-label">AI活用後</span>
+            <div class="minibar-track"><div class="minibar-fill after"></div></div>
+            <span class="minibar-num">6分</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explain-panel">
+      <h2>何が変わったのか（御社にとってのメリット）</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="explain-num">01</span>
+          <h3>ご連絡への折り返しが早くなりました</h3>
+          <p>委任状や契約書のドラフト作成が数十分から数分に短縮された分、担当弁護士がお客様対応に充てられる時間が増えました。</p>
+        </div>
+        <div class="explain-card">
+          <span class="explain-num">02</span>
+          <h3>作成ミス・抜け漏れのリスクを抑制</h3>
+          <p>AIが過去の書式・条文パターンをもとに下書きを作るため、記載漏れや形式ミスが起きにくくなります。最終判断は必ず人の弁護士が行います。</p>
+        </div>
+        <div class="explain-card">
+          <span class="explain-num">03</span>
+          <h3>戦略的なご相談によりお時間を使えます</h3>
+          <p>定型作業に取られていた時間が浮いた分、契約リスクの見立てや今後の事業展開のご相談など、御社にとって重要な話し合いに時間を使えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="顧問先企業の声">
+      <div class="testimonial-card">
+        <p>"契約書の初稿が出てくるスピードが上がり、意思決定も早く進むようになりました。"</p>
+        <span>— 製造業 A社 代表取締役</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"急ぎの委任状が必要になった際も、即日で対応いただけて助かりました。"</p>
+        <span>— 卸売業 B社 総務担当</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"書類の中身は、これまで通りしっかり弁護士の方が説明してくださるので安心です。"</p>
+        <span>— サービス業 C社 経営者</span>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>ご相談から書類お渡しまでの流れ</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span>電話・メールでご相談内容をお伺いします</li>
+        <li><span class="step-num">2</span>クイックドラフトAIが定型書類の下書きを自動作成</li>
+        <li><span class="step-num">3</span>担当弁護士が内容を確認・修正し、責任をもって確定</li>
+        <li><span class="step-num">4</span>短期間で書類をお渡し・次のご相談へ進みます</li>
+      </ol>
+      <p class="evidence-note">※作成時間の短縮率・対応件数の変化は、海外の同種事務所における導入実績データをもとにした目安です。実際の所要時間は案件の内容により異なります。</p>
+    </section>
+
+    <section class="cta-band">
+      <div>
+        <h2>顧問契約・ご相談について</h2>
+        <p>まずは現在お困りの内容をお聞かせください。担当弁護士より折り返しご連絡いたします。</p>
+      </div>
+      <div class="cta-contact">
+        <span>桜坂総合法律事務所　顧問契約デスク（デモ用架空窓口）</span>
+        <span class="cta-phone">03-0000-0000（平日 9:00–18:00）</span>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: STAFF / PRODUCT VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <nav class="app-nav" role="tablist" aria-label="画面切り替え">
+      <button class="app-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="app-tab" data-screen="draft" role="tab" aria-selected="false">文書ドラフト作成</button>
+      <button class="app-tab" data-screen="search" role="tab" aria-selected="false">判例AIサーチ</button>
+      <button class="app-tab" data-screen="analytics" role="tab" aria-selected="false">分析</button>
+      <button class="app-tab" data-screen="simulator" role="tab" aria-selected="false">工数シミュレーター</button>
+      <button class="app-tab" data-screen="settings" role="tab" aria-selected="false">設定</button>
+    </nav>
+
+    <!-- ---- HOME / DASHBOARD ---- -->
+    <section id="screen-home" class="screen active">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">スタッフ向けダッシュボード</p>
+          <h1>今月のクイックドラフトAI稼働状況</h1>
+          <p class="lede">定型文書の作成状況を、数字とグラフでまとめて確認できます。</p>
+        </div>
+        <div class="staff-refresh">最終更新：たった今</div>
+      </div>
+
+      <section class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">今月のドラフト作成件数</span>
+          <span class="stat-value">128<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">前月比 +9%</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">平均作成時間（AI活用後）</span>
+          <span class="stat-value">11<span class="stat-unit">分</span></span>
+          <span class="stat-delta">導入前は平均42分</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">今月の削減時間</span>
+          <span class="stat-value">約66<span class="stat-unit">時間</span></span>
+          <span class="stat-delta up">スタッフ全体の合計</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">判例AIサーチ利用率</span>
+          <span class="stat-value">86<span class="stat-unit">%</span></span>
+          <span class="stat-delta">導入18か月後の実績値</span>
+        </div>
+      </section>
+
+      <section class="staff-columns">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>書類種別ごとの作成件数（今月）</h2>
+            <span class="panel-note">クイックドラフトAI利用分</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chartHomeVolume" height="220"></canvas></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>直近6か月の削減時間の推移</h2>
+            <span class="panel-note">導入が進むほど削減効果が拡大</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chartHomeTrend" height="220"></canvas></div>
+        </div>
+      </section>
+
+      <section class="panel reassure-panel">
+        <div class="panel-head">
+          <h2>安心してご利用いただくために</h2>
+        </div>
+        <ul class="reassure-list">
+          <li>AIが生成したすべてのドラフトは「要レビュー」状態で保存され、担当弁護士の確認・承認なしに外部へ送付されることはありません。</li>
+          <li>誰が・いつ・どの書類を生成したかは自動的に記録され、監査ログからいつでも確認できます。</li>
+          <li>テンプレートは事務所内の管理者のみが更新でき、変更履歴もすべて残ります。</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- ---- DRAFT CREATION ---- -->
+    <section id="screen-draft" class="screen">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">文書ドラフト作成</p>
+          <h1>定型文書をAIで自動ドラフト</h1>
+          <p class="lede">書類の種類を選び、案件情報を入力すると、クイックドラフトAIが下書きを自動作成します。生成後は必ず担当弁護士の確認が必要です。</p>
+        </div>
+      </div>
+
+      <div class="draft-layout">
+        <div class="panel draft-form-panel">
+          <div class="panel-head"><h2>1. 書類の種類を選択</h2></div>
+          <div class="doc-type-grid" id="docTypeGrid">
+            <button type="button" class="doc-type-btn active" data-doc="poa">委任状ドラフトを自動生成</button>
+            <button type="button" class="doc-type-btn" data-doc="retainer">顧問契約書ドラフトを自動生成</button>
+            <button type="button" class="doc-type-btn" data-doc="brief">準備書面・申立書ドラフトを自動生成</button>
+            <button type="button" class="doc-type-btn" data-doc="records">資料開示請求書ドラフトを自動生成</button>
+            <button type="button" class="doc-type-btn" data-doc="notice">内容証明郵便ドラフトを自動生成</button>
+          </div>
+
+          <div class="panel-head"><h2>2. 案件情報を入力</h2></div>
+          <form id="draftForm" class="draft-form">
+            <label>依頼者名（顧問先）
+              <input type="text" id="fClient" placeholder="例：株式会社桜商事" value="株式会社桜商事">
+            </label>
+            <label>相手方・関係者名（任意）
+              <input type="text" id="fCounter" placeholder="例：株式会社湊物産">
+            </label>
+            <label>案件概要（任意）
+              <textarea id="fSummary" rows="2" placeholder="例：業務委託契約に関する債権回収の件"></textarea>
+            </label>
+            <button type="submit" class="btn-primary" id="draftSubmit">選択した書類のドラフトを生成する</button>
+            <p class="form-security-note">🔒 入力した情報は事務所内システムにのみ保存され、外部には送信されません。守秘義務のある情報も安心してご利用いただけます。</p>
+          </form>
+        </div>
+
+        <div class="panel draft-result-panel">
+          <div class="panel-head">
+            <h2>3. AIドラフト結果</h2>
+            <span class="panel-note" id="draftStatus">未生成</span>
+          </div>
+          <div id="draftOutput" class="draft-output">
+            <p class="draft-placeholder">左側で書類の種類を選び、「ドラフトを生成する」を押すと、ここに下書きが表示されます。</p>
+          </div>
+          <div class="draft-meta" id="draftMeta" hidden>
+            <div class="draft-meta-item">
+              <span class="meta-label">今回の作成時間</span>
+              <span class="meta-value" id="metaThisTime">–</span>
+            </div>
+            <div class="draft-meta-item">
+              <span class="meta-label">従来（AI活用前）の目安</span>
+              <span class="meta-value" id="metaBeforeTime">–</span>
+            </div>
+            <div class="draft-meta-item">
+              <span class="meta-label">ステータス</span>
+              <span class="meta-value status-review">要レビュー（担当弁護士確認待ち）</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- CASE SEARCH ---- -->
+    <section id="screen-search" class="screen">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">判例AIサーチ</p>
+          <h1>判例・条文をAIで高速検索</h1>
+          <p class="lede">キーワードや事案の概要を入力すると、関連する判例・条文の候補をAIが提示します。訴訟準備や申立書作成の下調べを短時間で行えます。</p>
+        </div>
+      </div>
+
+      <div class="panel search-panel">
+        <form id="searchForm" class="search-form">
+          <input type="text" id="searchInput" placeholder="例：業務委託契約 債務不履行 損害賠償" autocomplete="off">
+          <button type="submit">検索</button>
+        </form>
+        <div class="quick-replies">
+          <button type="button" class="quick" data-q="業務委託契約 債務不履行 損害賠償">業務委託契約 債務不履行 損害賠償</button>
+          <button type="button" class="quick" data-q="未払い残業代 請求 消滅時効">未払い残業代 請求 消滅時効</button>
+          <button type="button" class="quick" data-q="契約解除 予告期間 妥当性">契約解除 予告期間 妥当性</button>
+        </div>
+        <div id="searchResults" class="search-results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ---- ANALYTICS ---- -->
+    <section id="screen-analytics" class="screen">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">分析</p>
+          <h1>導入前後の作成時間比較</h1>
+          <p class="lede">クイックドラフトAI導入前後で、書類作成にかかる時間がどれだけ変わったかを可視化しています。</p>
+        </div>
+      </div>
+
+      <section class="stat-grid stat-grid-3">
+        <div class="stat-tile">
+          <span class="stat-label">複雑な申立書の作成時間</span>
+          <span class="stat-value">1/4<span class="stat-unit">に短縮</span></span>
+          <span class="stat-delta">連邦裁判所レベルの複雑な書面でも同様の傾向</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">弁護士1人あたりの対応可能案件数</span>
+          <span class="stat-value">+10<span class="stat-unit">%</span></span>
+          <span class="stat-delta up">1人あたりが対応できる案件数の増加分</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">判例AIサーチ利用率</span>
+          <span class="stat-value">86<span class="stat-unit">%</span></span>
+          <span class="stat-delta">導入18か月後の実績値</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>書類種別ごとの作成時間 Before / After</h2>
+          <span class="panel-note">1件あたりの平均所要時間（分）</span>
+        </div>
+        <div class="chart-wrap"><canvas id="chartAnalyticsBeforeAfter" height="260"></canvas></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>今月の書類種別内訳</h2>
+          <span class="panel-note">作成件数ベース</span>
+        </div>
+        <div class="chart-wrap chart-wrap-narrow"><canvas id="chartAnalyticsBreakdown" height="240"></canvas></div>
+      </section>
+    </section>
+
+    <!-- ---- SIMULATOR ---- -->
+    <section id="screen-simulator" class="screen">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">工数シミュレーター</p>
+          <h1>削減できる時間を概算する</h1>
+          <p class="lede">月間の定型文書作成件数と、現在1件あたりにかかっている平均時間を入力すると、AI活用後に見込まれる削減時間を概算できます。</p>
+        </div>
+      </div>
+
+      <div class="panel simulator-panel">
+        <div class="sim-inputs">
+          <label>月間の定型文書作成件数
+            <input type="number" id="simCount" min="0" max="1000" value="40">
+          </label>
+          <label>現在の1件あたり平均作成時間（分）
+            <input type="number" id="simMinutes" min="0" max="600" value="35">
+          </label>
+        </div>
+        <div class="sim-results">
+          <div class="sim-result-card">
+            <span class="sim-label">AI活用後の1件あたり目安</span>
+            <span class="sim-value" id="simAfterMinutes">–</span>
+          </div>
+          <div class="sim-result-card">
+            <span class="sim-label">月間の削減時間</span>
+            <span class="sim-value" id="simMonthlyHours">–</span>
+          </div>
+          <div class="sim-result-card">
+            <span class="sim-label">年間の削減時間</span>
+            <span class="sim-value" id="simYearlyHours">–</span>
+          </div>
+          <div class="sim-result-card highlight">
+            <span class="sim-label">浮いた時間で対応できるご相談の目安</span>
+            <span class="sim-value" id="simExtraCases">–</span>
+          </div>
+        </div>
+        <p class="sim-note">※作成時間は、導入事例に基づき従来比で約1/4になるという想定で計算しています。実際の削減幅は書類の複雑さや案件内容により異なります。「浮いた時間で対応できるご相談」は1件あたり平均60分として概算した目安です。</p>
+      </div>
+    </section>
+
+    <!-- ---- SETTINGS ---- -->
+    <section id="screen-settings" class="screen">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">設定</p>
+          <h1>テンプレート・連携・担当者の管理</h1>
+          <p class="lede">実際の操作はできませんが、管理画面のイメージをご確認いただけます。</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>文書テンプレート管理</h2>
+          <span class="panel-note">管理者のみ編集可能・変更履歴を自動保存</span>
+        </div>
+        <div class="table-wrap">
+          <table class="queue-table">
+            <thead><tr><th>テンプレート名</th><th>対象書類</th><th>最終更新</th><th>状態</th></tr></thead>
+            <tbody>
+              <tr><td>委任状（標準）</td><td>委任状</td><td>2026-07-02</td><td><span class="status-pill ok">有効</span></td></tr>
+              <tr><td>顧問契約書（月額顧問用）</td><td>顧問契約書</td><td>2026-06-18</td><td><span class="status-pill ok">有効</span></td></tr>
+              <tr><td>準備書面（債権回収）</td><td>準備書面・申立書</td><td>2026-05-30</td><td><span class="status-pill ok">有効</span></td></tr>
+              <tr><td>資料開示請求書（医療記録用）</td><td>資料開示請求書</td><td>2026-04-11</td><td><span class="status-pill ok">有効</span></td></tr>
+              <tr><td>内容証明郵便（標準）</td><td>内容証明郵便</td><td>2026-03-05</td><td><span class="status-pill ok">有効</span></td></tr>
+              <tr><td>示談書（旧書式）</td><td>示談書<br><span class="td-sub">※現在ドラフト作成の対象外の書類です</span></td><td>2025-11-20</td><td><span class="status-pill escalated">改訂待ち</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="settings-note">※「改訂待ち」のテンプレートはクイックドラフトAIの生成対象から自動的に除外されるため、古い書式が誤って使われることはありません。</p>
+      </section>
+
+      <section class="staff-columns">
+        <div class="panel">
+          <div class="panel-head"><h2>連携サービス</h2></div>
+          <ul class="integration-list">
+            <li>
+              <div><span class="integ-name">判例AIサーチ</span><span class="integ-desc">判例・条文検索AI（外部連携）</span></div>
+              <label class="toggle"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+            </li>
+            <li>
+              <div><span class="integ-name">顧問先ポータル</span><span class="integ-desc">書類の共有・確認用ポータル</span></div>
+              <label class="toggle"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+            </li>
+            <li>
+              <div><span class="integ-name">カレンダー連携</span><span class="integ-desc">期日・提出期限のリマインド</span></div>
+              <label class="toggle"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+            </li>
+            <li>
+              <div><span class="integ-name">会計・請求システム連携</span><span class="integ-desc">タイムチャージの自動反映</span></div>
+              <label class="toggle"><input type="checkbox" disabled><span class="toggle-slider"></span></label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>担当者・権限設定</h2></div>
+          <p class="settings-note settings-note-top">生成権限＝ドラフトを作成できる／レビュー承認権限＝内容を確認し案件に正式に使用できる、という区分です。</p>
+          <div class="table-wrap">
+            <table class="queue-table">
+              <thead><tr><th>担当者</th><th>役職</th><th>生成権限</th><th>レビュー承認権限</th></tr></thead>
+              <tbody>
+                <tr><td>佐伯 直人</td><td>パートナー弁護士</td><td>可</td><td>可</td></tr>
+                <tr><td>今宮 美咲</td><td>アソシエイト弁護士</td><td>可</td><td>可</td></tr>
+                <tr><td>大場 健太</td><td>パラリーガル</td><td>可</td><td>不可</td></tr>
+                <tr><td>木下 彩</td><td>事務スタッフ</td><td>可</td><td>不可</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは海外のAI活用事例（米国の法律事務所における定型文書作成AIツール内製導入事例）をもとに構成した架空のシミュレーションです。事務所名・担当者名・数値・画面上のデータはすべて仮のものであり、実在の企業・団体とは関係ありません。</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
