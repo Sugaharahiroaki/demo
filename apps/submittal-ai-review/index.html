@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENBA AI サブミタル照合デモ | 誠和建設工業株式会社</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">G</span>
+      <div>
+        <div class="brand-name">GENBA AI</div>
+        <div class="brand-sub">サブミタル照合デモ</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" role="tablist" aria-label="画面切替">
+      <button class="nav-item active" data-view="home" role="tab" aria-selected="true">
+        <span class="nav-icon" aria-hidden="true">&#9679;</span>ホーム
+      </button>
+      <button class="nav-item" data-view="review" role="tab" aria-selected="false">
+        <span class="nav-icon" aria-hidden="true">&#9679;</span>サブミタルAI照合
+      </button>
+      <button class="nav-item" data-view="analytics" role="tab" aria-selected="false">
+        <span class="nav-icon" aria-hidden="true">&#9679;</span>分析レポート
+      </button>
+      <button class="nav-item" data-view="simulator" role="tab" aria-selected="false">
+        <span class="nav-icon" aria-hidden="true">&#9679;</span>削減シミュレーター
+      </button>
+      <button class="nav-item" data-view="settings" role="tab" aria-selected="false">
+        <span class="nav-icon" aria-hidden="true">&#9679;</span>設定
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="user-card">
+        <span class="user-avatar">佐</span>
+        <div>
+          <div class="user-name">佐藤 健一</div>
+          <div class="user-role">現場代理人</div>
+        </div>
+      </div>
+      <div class="sidebar-client">誠和建設工業株式会社</div>
+    </div>
+  </aside>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main-col">
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-btn" type="button" id="menuBtn" aria-label="メニューを開く">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        </button>
+        <span class="project-chip">対象工事：白鷺大橋 上部工事</span>
+      </div>
+      <div class="topbar-right">
+        <span class="today">2026年8月17日（月）</span>
+        <button class="bell-btn" type="button" aria-label="通知">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2H9.8A2.2 2.2 0 0 0 12 22zm7-6.2v-5c0-3.2-1.7-5.9-4.8-6.6V3.6a1.2 1.2 0 1 0-2.4 0v.6C8.7 4.9 7 7.6 7 10.8v5L5 17.8V19h14v-1.2z"/></svg>
+          <span class="bell-badge">3</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- ============ VIEW: HOME / DASHBOARD ============ -->
+      <section id="view-home" class="view active">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">ホーム</p>
+            <h1>サブミタルAI照合 導入状況</h1>
+            <p class="lede">導入から3か月間のAI照合結果を一覧で確認できます。数字は海外事例（Trunk Tools社ケーススタディ）の実績をもとにしたデモデータです。</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-accent">
+            <span class="kpi-label">再提出サイクルタイム短縮</span>
+            <span class="kpi-value">50<span class="kpi-unit">%短縮</span></span>
+            <span class="kpi-note">例：8.4日 &rarr; 4.2日</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">累計AI照合件数（3か月）</span>
+            <span class="kpi-value">2,164<span class="kpi-unit">件</span></span>
+            <span class="kpi-note">1営業日あたり平均約34件</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">提出前に不備を検出</span>
+            <span class="kpi-value">97<span class="kpi-unit">%</span></span>
+            <span class="kpi-note">不適合72% + 部分適合25%</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">一発完全適合</span>
+            <span class="kpi-value">3<span class="kpi-unit">%</span></span>
+            <span class="kpi-note">残り97%は、従来なら提出後に発覚していた可能性</span>
+          </div>
+        </div>
+
+        <div class="plain-callout">
+          <div class="plain-callout-icon" aria-hidden="true">&#128274;</div>
+          <div>
+            <strong>現場にとっての意味：</strong>
+            差し戻しの往復が半分になる＝手待ちや手戻り作業が減り、工程を読みやすくなります。判定はAIが提示し、承認・却下の最終判断は必ず人が行います。
+          </div>
+          <button type="button" class="btn btn-ghost plain-callout-btn" id="goToSimBtn">削減額を試算する &rarr;</button>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>月別 平均再提出サイクルタイムの推移</h2>
+              <span class="panel-note">デモ用サンプルデータ（日数）</span>
+            </div>
+            <div class="chart-wrap"><canvas id="trendChart" height="220"></canvas></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>対応が必要な不適合案件</h2>
+              <span class="panel-note">AIが「不適合」と判定した提出書類のみ表示</span>
+            </div>
+            <ul class="escalation-list" id="escalationList"></ul>
+          </div>
+        </div>
+
+        <section class="panel queue-panel">
+          <div class="panel-head">
+            <h2>直近のAI照合結果</h2>
+            <span class="panel-note">サブミタルAI照合画面から詳細を確認できます</span>
+          </div>
+          <div class="table-wrap">
+            <table class="queue-table">
+              <thead>
+                <tr><th>提出日</th><th>書類名</th><th>工種</th><th>AI判定</th><th>担当者</th><th></th></tr>
+              </thead>
+              <tbody id="queueBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- ============ VIEW: SUBMITTAL AI REVIEW ============ -->
+      <section id="view-review" class="view">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">サブミタルAI照合</p>
+            <h1>提出前に、AIが設計図書・仕様書と自動照合します</h1>
+            <p class="lede">サブミタル（提出書類）をアップロードすると、AIが意匠図・構造図・仕様書と自動で突き合わせ、不適合・部分適合・完全適合を判定してフラグを立てます。これは体験用のシミュレーションです。実際のファイルはアップロードされません。</p>
+          </div>
+        </div>
+
+        <div class="trust-banner">
+          <span class="trust-banner-icon" aria-hidden="true">&#10003;</span>
+          <p>AIが行うのは、提出前に不整合の可能性を洗い出して「判断材料」を示すところまでです。差し戻し・承認・安全に関わる最終判断は、必ず設計チーム・現場責任者が行います。</p>
+        </div>
+
+        <div class="review-grid">
+          <div class="panel upload-panel">
+            <div class="panel-head">
+              <h2>1. サブミタルをアップロード</h2>
+            </div>
+            <div class="dropzone" id="dropzone">
+              <svg viewBox="0 0 24 24" width="30" height="30" class="dropzone-icon"><path d="M12 3l5 5h-3v6h-4V8H7l5-5zm-7 14h14v4H5v-4z"/></svg>
+              <p id="dropzoneText">審査するサブミタルを選択してください</p>
+            </div>
+            <div class="preset-list" id="presetList"></div>
+            <button class="btn btn-primary btn-block" id="startReviewBtn" disabled>AI照合を開始</button>
+          </div>
+
+          <div class="panel result-panel" id="resultPanel">
+            <div class="panel-head">
+              <h2>2. AI照合結果を見る</h2>
+            </div>
+            <div class="result-empty" id="resultEmpty">
+              <p>左側でサブミタルを選択し、「AI照合を開始」を押すと、ここに照合結果が表示されます。</p>
+            </div>
+            <div class="result-progress hidden" id="resultProgress">
+              <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+              <p id="progressStep">照合を開始しています…</p>
+            </div>
+            <div class="result-body hidden" id="resultBody"></div>
+          </div>
+        </div>
+
+        <div class="panel chat-panel">
+          <div class="panel-head">
+            <h2>GenbaTalk — 図面・仕様書にAIチャットで質問する</h2>
+            <span class="panel-note">プロジェクト文書を横断検索してAIが回答します（体験用シミュレーション）</span>
+          </div>
+          <div id="chatLog" class="chat-log" aria-live="polite"></div>
+          <form id="chatForm" class="chat-input-row">
+            <input id="chatInput" type="text" placeholder="例：耐火被覆の厚みは？" autocomplete="off">
+            <button type="submit">送信</button>
+          </form>
+          <div class="quick-replies">
+            <button type="button" class="quick" data-msg="耐火被覆の厚みは？">耐火被覆の厚みは？</button>
+            <button type="button" class="quick" data-msg="鉄骨接合部の溶接規格は？">鉄骨接合部の溶接規格は？</button>
+            <button type="button" class="quick" data-msg="防水層の重ね幅は仕様書のどこに書いてある？">防水層の重ね幅は？</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: ANALYTICS ============ -->
+      <section id="view-analytics" class="view">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">分析レポート</p>
+            <h1>導入前後の比較と内訳</h1>
+            <p class="lede">数値は海外事例をもとにしたデモデータです。実際の効果は工事内容・体制により異なります。</p>
+          </div>
+        </div>
+
+        <div class="source-legend">
+          <span><span class="source-dot source-real"></span>海外事例（Trunk Tools社ケーススタディ）の実績値：50%短縮／2,164件／97%（不適合72%＋部分適合25%）／3%</span>
+          <span><span class="source-dot source-demo"></span>それ以外（月別推移・工種別内訳・日数例・RFI件数）はデモ用の説明用サンプルです</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>再提出サイクルタイム（導入前 &rarr; 導入後）</h2>
+              <span class="panel-note">指数（導入前=100）／ 例：8.4日 &rarr; 4.2日</span>
+            </div>
+            <div class="compare-bars">
+              <div class="compare-row">
+                <span class="compare-label">導入前</span>
+                <div class="compare-track"><div class="compare-fill before" style="width:100%"></div></div>
+                <span class="compare-val">100</span>
+              </div>
+              <div class="compare-row">
+                <span class="compare-label">導入後</span>
+                <div class="compare-track"><div class="compare-fill after" style="width:50%"></div></div>
+                <span class="compare-val">50</span>
+              </div>
+            </div>
+            <p class="fine-print">※ 日数は説明用の一例です。実際の短縮幅は工事内容や体制により異なります。</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>AI判定内訳（全2,164件）</h2>
+              <span class="panel-note">導入後3か月間の累計</span>
+            </div>
+            <div class="chart-wrap"><canvas id="breakdownChart" height="220"></canvas></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>工種別 不適合検出率</h2>
+            <span class="panel-note">デモ用サンプルデータ</span>
+          </div>
+          <div class="chart-wrap"><canvas id="tradeChart" height="200"></canvas></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>手戻り防止効果（概算）</h2>
+          </div>
+          <div class="impact-grid">
+            <div class="impact-item">
+              <span class="impact-num">約450件</span>
+              <span class="impact-desc">導入前に想定されていた月間RFI（質問回答）件数の目安</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-num">約180件</span>
+              <span class="impact-desc">AI照合導入後の月間RFI件数の目安</span>
+            </div>
+          </div>
+          <p class="fine-print">※ 具体的な金額は案件情報に含まれていないため、本デモでは件数ベースの概算のみ表示しています。実際の削減効果は現場条件により異なります。</p>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: SIMULATOR ============ -->
+      <section id="view-simulator" class="view">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">削減シミュレーター</p>
+            <h1>自社の件数を入れて、削減効果の目安を計算</h1>
+            <p class="lede">貴社のサブミタル提出件数・レビュー体制を入力すると、AI照合導入による概算の削減効果をその場で計算します（すべてブラウザ上の概算計算で、送信・保存は行われません）。</p>
+          </div>
+        </div>
+
+        <div class="sim-grid">
+          <div class="panel sim-inputs">
+            <div class="panel-head"><h2>入力条件</h2></div>
+            <label class="sim-field">
+              <span>月間サブミタル提出件数</span>
+              <input type="number" id="simCount" value="40" min="1" max="1000" step="1">
+            </label>
+            <label class="sim-field">
+              <span>1件あたりの平均レビュー時間（時間）</span>
+              <input type="number" id="simHours" value="1.2" min="0.1" max="20" step="0.1">
+            </label>
+            <label class="sim-field">
+              <span>レビュー担当者の平均人件費（円／時）</span>
+              <input type="number" id="simWage" value="4500" min="500" max="20000" step="100">
+            </label>
+            <label class="sim-field">
+              <span>現在の平均再提出サイクルタイム（日）</span>
+              <input type="number" id="simCycle" value="8" min="1" max="60" step="0.5">
+            </label>
+          </div>
+
+          <div class="panel sim-outputs">
+            <div class="panel-head"><h2>AI照合導入後の概算効果</h2></div>
+            <div class="sim-result-grid">
+              <div class="sim-result">
+                <span class="sim-result-label">想定サイクルタイム</span>
+                <span class="sim-result-value" id="outCycle">4.0日</span>
+                <span class="sim-result-sub">現在比 50%短縮を適用</span>
+              </div>
+              <div class="sim-result">
+                <span class="sim-result-label">年間レビュー時間削減（概算）</span>
+                <span class="sim-result-value" id="outHours">230時間</span>
+                <span class="sim-result-sub">AIの一次照合による削減分（仮定40%）</span>
+              </div>
+              <div class="sim-result sim-result-accent">
+                <span class="sim-result-label">年間コスト削減額（概算）</span>
+                <span class="sim-result-value" id="outCost">¥1,036,800</span>
+                <span class="sim-result-sub">レビュー人件費ベースの概算のみ</span>
+              </div>
+            </div>
+            <p class="fine-print">※ 本シミュレーターの数値はすべて概算です。レビュー時間の削減率（40%）は説明用の仮定であり、案件データに基づく実績値ではありません。手戻り・RFI・工程遅延の未然防止による効果は含まれておらず、実際の削減効果はさらに大きくなる可能性があります。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIEW: SETTINGS ============ -->
+      <section id="view-settings" class="view">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">設定</p>
+            <h1>通知・連携・レビュー体制の設定</h1>
+            <p class="lede">これはデモ環境です。ここでの変更は保存されません。</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head"><h2>通知設定</h2></div>
+            <div class="setting-row">
+              <div>
+                <div class="setting-title">不適合を検出したら通知する</div>
+                <div class="setting-desc">メールとSlackへ即時通知</div>
+              </div>
+              <button class="switch on" type="button" data-setting="notify-critical" aria-pressed="true"></button>
+            </div>
+            <div class="setting-row">
+              <div>
+                <div class="setting-title">部分適合を検出したら通知する</div>
+                <div class="setting-desc">確認が必要な項目のみ通知</div>
+              </div>
+              <button class="switch on" type="button" data-setting="notify-partial" aria-pressed="true"></button>
+            </div>
+            <div class="setting-row">
+              <div>
+                <div class="setting-title">日次サマリーメール</div>
+                <div class="setting-desc">毎朝7時に前日分をまとめて送付</div>
+              </div>
+              <button class="switch" type="button" data-setting="notify-daily" aria-pressed="false"></button>
+            </div>
+            <div class="setting-row">
+              <div>
+                <div class="setting-title">Slack連携通知</div>
+                <div class="setting-desc">#genba-submittal チャンネルへ投稿</div>
+              </div>
+              <button class="switch on" type="button" data-setting="notify-slack" aria-pressed="true"></button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h2>連携サービス</h2></div>
+            <div class="integration-row">
+              <div>
+                <div class="setting-title">図面管理システム連携</div>
+                <div class="setting-desc">最新の意匠図・構造図を自動同期</div>
+              </div>
+              <button class="btn btn-connected" type="button" data-integration="drawing">接続済み</button>
+            </div>
+            <div class="integration-row">
+              <div>
+                <div class="setting-title">工程管理ツール連携</div>
+                <div class="setting-desc">再提出サイクルを工程表へ反映</div>
+              </div>
+              <button class="btn btn-connected" type="button" data-integration="schedule">接続済み</button>
+            </div>
+            <div class="integration-row">
+              <div>
+                <div class="setting-title">会計・原価管理システム連携</div>
+                <div class="setting-desc">手戻りコストの試算に利用（任意）</div>
+              </div>
+              <button class="btn btn-secondary" type="button" data-integration="accounting">接続する</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>AI判定・通知のしきい値</h2></div>
+          <label class="sim-field">
+            <span>通知の対象とするAI判定</span>
+            <select id="thresholdSelect">
+              <option value="partial" selected>部分適合以上（不適合＋部分適合）</option>
+              <option value="critical">不適合のみ</option>
+              <option value="all">すべての判定</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>工種別 担当レビュアー設定</h2></div>
+          <div class="table-wrap">
+            <table class="queue-table">
+              <thead><tr><th>工種</th><th>担当者</th></tr></thead>
+              <tbody id="reviewerBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="saveSettingsBtn">設定を保存</button>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>本デモは海外のAI活用事例（Trunk Tools社ケーススタディ）をもとに構成した架空のシミュレーションです。登場する企業名・人物名・数値はすべて仮のものであり、実在の企業・団体とは一切関係ありません。</p>
+    </footer>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -13,3 +13,4 @@
 | [apps/legal-document-ai-drafting](apps/legal-document-ai-drafting) | 税理士・社労士・法律事務所 | 法律事務所（米国／内製AIツール）－定型文書作成AIで申立書作成時間を4分の1に短縮 |
 | [apps/advisory-savings-simulator](apps/advisory-savings-simulator) | 税理士・社労士・法律事務所 | 会計事務所（米国／Thomson Reuters「Ready to Advise」）－AI提案書で顧客単価が最大7倍に |
 | [apps/facial-ai-treatment-planner](apps/facial-ai-treatment-planner) | 美容クリニック | 美容クリニック（米国・カリフォルニア州／Ponce AI）－AIフェイシャル分析で45日間に患者単価33%増 |
+| [apps/submittal-ai-review](apps/submittal-ai-review) | 建設・専門工事 | 大手ゼネコン（米国／Trunk Tools）－提出書類の97%に不備発見、再提出サイクル50%短縮 |
