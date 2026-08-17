@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ponce AI フェイシャル分析デモ | Solenne Skin Clinic</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">S</span>
+    <div>
+      <div class="brand-name">Solenne Skin Clinic</div>
+      <div class="brand-sub">Ponce AI フェイシャル分析 デモアプリ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="patient" role="tab" aria-selected="true">患者としてスキャンを体験</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">スタッフ・カウンセラー画面</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: PATIENT / PROSPECT VIEW ============ -->
+  <section id="view-patient" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">来院前 自宅スキャン &middot; 所要時間 約2分</p>
+        <h1>来院する前に、<br>自分の肌のことを知っておく。</h1>
+        <p class="lede">Ponce AIがスマートフォンで肌の状態をやさしく分析。来院時には、その結果を見ながらカウンセラーとゆっくりお話しできます。今すぐ決めていただく必要はありません。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">2分</span><span class="trust-label">スキャンの所要時間</span></div>
+          <div class="trust-item"><span class="trust-num">0件</span><span class="trust-label">その場での強い勧誘</span></div>
+          <div class="trust-item"><span class="trust-num">4.5<span class="trust-unit">/5</span></span><span class="trust-label">体験満足度（実績）</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="scan-frame" id="heroFrame">
+          <div class="scan-ring"></div>
+          <svg viewBox="0 0 24 24" class="face-icon"><path d="M12 2a7 7 0 0 0-7 7v2.2c0 .5-.2 1-.6 1.4l-.9.9c-.4.4-.2 1 .3 1.1l1.2.3v1.6c0 1 .8 1.8 1.8 1.8h.4c.2 1.2 1.3 2.1 2.6 2.1h4.4c1.3 0 2.4-.9 2.6-2.1h.4c1 0 1.8-.8 1.8-1.8v-1.6l1.2-.3c.5-.1.7-.7.3-1.1l-.9-.9c-.4-.4-.6-.9-.6-1.4V9a7 7 0 0 0-7-7zm-2.5 9.2a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-3.8 3.6c.9.5 1.9.5 2.8 0" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" aria-label="ご利用の流れ">
+      <h2>ご来院までの流れ</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span>来院前にスキャンのご案内メッセージが届く</li>
+        <li><span class="step-num">2</span>ご自宅でスマホの顔スキャンを実施（約2分）</li>
+        <li><span class="step-num">3</span>来院時、カウンセラーと一緒にAI分析結果を確認</li>
+        <li><span class="step-num">4</span>気になる項目だけ、無理なく優先順位を相談</li>
+      </ol>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-panel-head">
+        <h2>Ponce AI フェイシャルスキャンを体験してみる</h2>
+        <p>実際に届く来院前メッセージのイメージです。下のボタンからスキャン体験を始めてみてください。これは体験用のシミュレーションで、実際にカメラを使用することはありません。</p>
+      </div>
+
+      <div class="scan-widget">
+        <div class="scan-widget-head">
+          <span class="scan-dot"></span>
+          <span>Ponce AI &mdash; 来院前スキャン</span>
+        </div>
+
+        <div id="scanStageIntro" class="scan-stage">
+          <div class="pre-msg">
+            <p class="pre-msg-label">Solenne Skin Clinicより</p>
+            <p class="pre-msg-body">ご来院ありがとうございます。来院前に、スマホで簡単な肌スキャンをお願いできますか？当日のご案内がよりスムーズになります。所要時間は約2分、無料です。</p>
+          </div>
+          <button type="button" id="startScanBtn" class="btn-primary">スキャンを始める</button>
+        </div>
+
+        <div id="scanStageProgress" class="scan-stage hidden">
+          <div class="scan-visual">
+            <div class="scan-ring scan-ring-active"></div>
+            <span class="scan-percent" id="scanPercent">0%</span>
+          </div>
+          <p class="scan-status" id="scanStatusText">画像を取得しています…</p>
+        </div>
+
+        <div id="scanStageResult" class="scan-stage hidden">
+          <div class="result-intro">
+            <p class="result-intro-label">スキャン結果</p>
+            <p class="result-intro-body">お疲れさまでした。あなたの肌の状態を、AIがやさしく整理しました。数値は今の状態を知るための目安です。どれも「今すぐ対応が必要」という意味ではありません。</p>
+          </div>
+
+          <p class="metric-legend">スコアは高いほど良好な状態です。今すぐ対応が必要という意味ではありません。</p>
+          <div class="metric-list" id="metricList" aria-label="肌測定結果"></div>
+
+          <div class="suggest-block">
+            <p class="suggest-head">AIからのご提案</p>
+            <p class="suggest-sub">気になるものだけ「興味リストに追加」してください。今すぐ決めなくて大丈夫です。来院時にカウンセラーが詳しくご説明します。</p>
+            <div class="suggest-list" id="suggestList"></div>
+          </div>
+
+          <div class="interest-summary" id="interestSummary">
+            <span id="interestCount">興味リスト：0件</span>
+            <button type="button" class="btn-secondary" id="consultBtn">来院時の相談について見る</button>
+          </div>
+          <p class="result-note" id="consultNote" hidden>興味リストの内容は、来院時にカウンセラーへ自動で共有されます。当日はこの内容をもとに、ご希望や不安な点をゆっくりお伺いしながら、無理のない範囲で優先順位をご一緒に考えます。</p>
+          <button type="button" class="btn-text" id="resetScanBtn">もう一度スキャンを体験する</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: STAFF / COUNSELOR VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <nav class="subnav" role="tablist" aria-label="スタッフ画面ナビゲーション">
+      <button class="subtab active" data-staffview="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="subtab" data-staffview="analysis" role="tab" aria-selected="false">分析</button>
+      <button class="subtab" data-staffview="settings" role="tab" aria-selected="false">設定</button>
+      <button class="subtab" data-staffview="pricing" role="tab" aria-selected="false">料金シミュレーター</button>
+    </nav>
+
+    <!-- ---- Staff: Home / Dashboard ---- -->
+    <section id="staff-home" class="staffview active">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">スタッフ向けダッシュボード</p>
+          <h1>Ponce AI 導入後の実績サマリー</h1>
+          <p class="lede">45日間の実績データです。商談の場でそのままご覧いただけます。</p>
+        </div>
+        <div class="staff-refresh">最終更新：たった今</div>
+      </div>
+
+      <section class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">患者単価（45日間）</span>
+          <span class="stat-value">+33<span class="stat-unit">%</span></span>
+          <span class="stat-delta up">33名の患者で +$15,729</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">創出されたリード</span>
+          <span class="stat-value">約150<span class="stat-unit">件</span></span>
+          <span class="stat-delta">1人あたり平均 約6件</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">AI提案の興味リスト保存率</span>
+          <span class="stat-value">61<span class="stat-unit">%</span></span>
+          <span class="stat-delta">提案の半数以上が保存</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">患者体験満足度</span>
+          <span class="stat-value">4.5<span class="stat-unit">/5</span></span>
+          <span class="stat-delta up">導入後アンケート</span>
+        </div>
+      </section>
+
+      <section class="staff-columns">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>患者単価の推移（45日間）</h2>
+            <span class="panel-note">導入前 平均 &rarr; 導入後 平均</span>
+          </div>
+          <div class="compare-chart" id="spendChart"></div>
+          <p class="chart-foot"><button type="button" class="link-btn" data-jump-staffview="analysis">保存率・満足度など詳しい分析を見る →</button></p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>本日の来院前スキャン状況</h2>
+            <span class="panel-note">来院時にプロバイダーが結果を開いてご案内</span>
+          </div>
+          <ul class="scan-status-list" id="scanStatusListStaff"></ul>
+        </div>
+      </section>
+    </section>
+
+    <!-- ---- Staff: Analysis ---- -->
+    <section id="staff-analysis" class="staffview">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">Before / After 分析</p>
+          <h1>導入前後の変化を見る</h1>
+          <p class="lede">米国・カリフォルニア州の美容クリニックにおけるPonce AI導入事例の45日間の実績データをもとにしています。</p>
+        </div>
+      </div>
+
+      <section class="staff-columns">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>45日間の実績サマリー</h2>
+            <span class="panel-note">患者単価の推移はホーム画面のグラフをご参照ください</span>
+          </div>
+          <ul class="recap-list">
+            <li><span class="recap-num">33名</span><span class="recap-label">対象患者数</span></li>
+            <li><span class="recap-num">+$15,729</span><span class="recap-label">増分売上（合計）</span></li>
+            <li><span class="recap-num">+33%</span><span class="recap-label">患者単価の変化（45日間）</span></li>
+            <li><span class="recap-num">+56%</span><span class="recap-label">購買額の押し上げ予測（12カ月換算）</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>AI提案の興味リスト保存率</h2>
+            <span class="panel-note">提案された施術のうち、患者が保存した割合</span>
+          </div>
+          <div class="donut-wrap">
+            <svg viewBox="0 0 120 120" class="donut" aria-label="興味リスト保存率 61%">
+              <circle cx="60" cy="60" r="50" class="donut-track"></circle>
+              <circle cx="60" cy="60" r="50" class="donut-fill" id="donutFill"></circle>
+              <text x="60" y="66" text-anchor="middle" class="donut-text">61%</text>
+            </svg>
+            <div class="donut-caption">
+              <p>1人あたり平均 <strong>約6件</strong>の新規施術に興味を表明</p>
+              <p>合計 <strong>約150件</strong>のリードを創出</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>満足度</h2>
+          <span class="panel-note">導入後アンケート（5点満点）</span>
+        </div>
+        <div class="satisfaction-row">
+          <span class="satisfaction-score">4.5</span>
+          <div class="satisfaction-stars" aria-hidden="true">★★★★★</div>
+          <p class="satisfaction-note">「来院前に自分の肌を知れて安心できた」という声が多く見られました。</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- ---- Staff: Settings ---- -->
+    <section id="staff-settings" class="staffview">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">設定</p>
+          <h1>通知・連携・担当者</h1>
+          <p class="lede">見た目の動作確認用です。実際の保存処理は行われません。</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h2>通知設定</h2></div>
+        <div class="settings-rows">
+          <label class="toggle-row">
+            <span>来院前スキャンのリマインドを自動送信する</span>
+            <span class="switch"><input type="checkbox" checked><span class="slider"></span></span>
+          </label>
+          <label class="toggle-row">
+            <span>スキャン完了をスタッフに通知する</span>
+            <span class="switch"><input type="checkbox" checked><span class="slider"></span></span>
+          </label>
+          <label class="toggle-row">
+            <span>来院後に満足度アンケートを送付する</span>
+            <span class="switch"><input type="checkbox" checked><span class="slider"></span></span>
+          </label>
+          <label class="toggle-row">
+            <span>AI提案を保存した患者にフォローメッセージを送る</span>
+            <span class="switch"><input type="checkbox"><span class="slider"></span></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>連携サービス</h2></div>
+        <div class="integration-rows">
+          <div class="integration-row">
+            <div>
+              <p class="integration-name">Ponce AI（フェイシャル分析）</p>
+              <p class="integration-desc">来院前スキャンとAI提案の生成</p>
+            </div>
+            <span class="status-pill ok">連携済み</span>
+          </div>
+          <div class="integration-row">
+            <div>
+              <p class="integration-name">NexTech PM（患者管理システム）</p>
+              <p class="integration-desc">分析結果とカルテ・予約情報を同期</p>
+            </div>
+            <span class="status-pill ok">連携済み</span>
+          </div>
+          <div class="integration-row" id="calendarRow">
+            <div>
+              <p class="integration-name">カレンダー連携</p>
+              <p class="integration-desc">来院予定と自動リマインド送信を同期</p>
+            </div>
+            <button type="button" class="connect-btn" id="connectCalendarBtn">接続する</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>担当者設定</h2></div>
+        <p class="panel-note settings-hint">AI分析結果のレビュー担当を選択してください（複数選択可）</p>
+        <div class="settings-rows">
+          <label class="toggle-row simple">
+            <input type="checkbox" checked>
+            <span>川口 美咲（チーフカウンセラー）</span>
+          </label>
+          <label class="toggle-row simple">
+            <input type="checkbox" checked>
+            <span>中田 玲奈（カウンセラー）</span>
+          </label>
+          <label class="toggle-row simple">
+            <input type="checkbox">
+            <span>藤原 恵（カウンセラー・研修中）</span>
+          </label>
+        </div>
+      </section>
+    </section>
+
+    <!-- ---- Staff: Pricing simulator ---- -->
+    <section id="staff-pricing" class="staffview">
+      <div class="staff-head">
+        <div>
+          <p class="eyebrow">料金シミュレーター</p>
+          <h1>導入効果を概算してみる</h1>
+          <p class="lede">貴院の月間来院患者数と平均患者単価を入力すると、実績データに基づく概算の増収イメージを計算します。</p>
+        </div>
+      </div>
+
+      <section class="panel simulator-panel">
+        <div class="simulator-inputs">
+          <label class="sim-field">
+            <span>月間の来院患者数</span>
+            <input type="range" id="simPatients" min="10" max="300" step="5" value="60">
+            <span class="sim-value" id="simPatientsVal">60名 / 月</span>
+          </label>
+          <label class="sim-field">
+            <span>現在の平均患者単価</span>
+            <input type="range" id="simSpend" min="100" max="3000" step="10" value="300">
+            <span class="sim-value" id="simSpendVal">$300</span>
+          </label>
+        </div>
+
+        <div class="simulator-outputs">
+          <div class="sim-output-tile">
+            <span class="sim-output-label">月間の増収イメージ</span>
+            <span class="sim-output-value" id="simMonthly">$0</span>
+            <span class="sim-output-note">45日間実績の患者単価 +33% を基に算出</span>
+          </div>
+          <div class="sim-output-tile highlight">
+            <span class="sim-output-label">年間の増収イメージ</span>
+            <span class="sim-output-value" id="simAnnual">$0</span>
+            <span class="sim-output-note">12カ月換算の購買額押し上げ予測 +56% を基に算出</span>
+          </div>
+        </div>
+        <p class="sim-disclaimer">本シミュレーションはPonce AI導入事例（米国・カリフォルニア州の美容クリニック、45日間の実績）を基にした概算です。効果を保証するものではなく、実際の結果は貴院の状況により異なります。</p>
+      </section>
+    </section>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは海外のAI活用事例（Ponce AIケーススタディ）をもとに構成した架空のシミュレーションです。Solenne Skin Clinic、登場する担当者名・患者情報・画面上の数値はすべて仮のものであり、実在の人物・団体とは関係ありません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

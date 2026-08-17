@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIアドバイザリー・コックピット デモ | 誠和パートナーズ税理士法人</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">誠</span>
+    <div>
+      <div class="brand-name">誠和パートナーズ税理士法人</div>
+      <div class="brand-sub">AIアドバイザリー・コックピット デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="client" role="tab" aria-selected="true">顧問先の経営者の方</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">事務所スタッフの方</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: CLIENT (顧問先経営者) VIEW ============ -->
+  <section id="view-client" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">面談のその場で、数字が変わる提案を</p>
+        <h1>「うちの場合、実際いくらの話ですか？」に<br>その場の面談内でお答えします。</h1>
+        <p class="lede">担当税理士との面談中に、AIが貴社の状況をもとにアドバイザリー提案の目安をその場で試算・可視化します。持ち帰って後日連絡、ではなく、その場で具体的な金額を見ながらご相談いただけます。最終的なご提案内容は、必ず有資格の税理士が確認します。</p>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="trust-badge">参考値</span>
+            <span class="trust-num">+109<span class="trust-unit">%</span></span>
+            <span class="trust-label">海外の同種AI導入事例における、既存クライアントの月間顧問料 平均伸び率</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">100<span class="trust-unit">%</span></span>
+            <span class="trust-label">AIの試算内容は税理士が最終確認してからご提示</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">即時</span>
+            <span class="trust-label">面談を中断せず、その場で試算結果を提示</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="doc-frame">
+          <div class="doc-glow"></div>
+          <div class="doc-line doc-line-title"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-chip">試算中…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="顧問先経営者の声（デモ用の想定コメント）">
+      <div class="testimonial-card">
+        <p>“その場で「御社の場合はここまで見込めます」と具体的な数字を示してもらえたので、次の一手を決めやすかったです。”</p>
+        <span>— 製造業 経営者（想定コメント）</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“漠然とした節税アドバイスではなく、うちの数字に基づいた話だったので納得感がありました。”</p>
+        <span>— 卸売業 経営者（想定コメント）</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“AIが出した数字をそのまま鵜呑みにせず、担当の先生が『ここは要確認』と説明してくれたのが安心でした。”</p>
+        <span>— サービス業 経営者（想定コメント）</span>
+      </div>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-panel-head">
+        <h2>アドバイザリー試算シミュレーターを体験する</h2>
+        <p>面談で実際にご覧いただく画面と同じ形式です。貴社の概算情報を入力すると、アドバイザリー提案額の目安をその場で試算します。これは体験用のシミュレーションで、実際の数値の入力・保存は行われません。</p>
+      </div>
+
+      <div class="sim-widget">
+        <form id="simForm" class="sim-form">
+          <div class="sim-field">
+            <label for="revenue">年商の目安</label>
+            <select id="revenue">
+              <option value="30">〜3,000万円</option>
+              <option value="80" selected>3,000万円〜1億円</option>
+              <option value="200">1億円〜3億円</option>
+              <option value="400">3億円〜</option>
+            </select>
+          </div>
+          <div class="sim-field">
+            <label for="currentFee">現在の顧問料（月額・万円）</label>
+            <input type="number" id="currentFee" min="1" max="200" value="8" required>
+            <span class="sim-field-error" id="feeError" hidden>1以上の数値を入力してください</span>
+          </div>
+          <div class="sim-field">
+            <label for="topic">現在の経営課題（最も近いもの）</label>
+            <select id="topic">
+              <option value="tax">節税・税務プランニング</option>
+              <option value="cashflow">資金繰り・資金調達</option>
+              <option value="succession">事業承継・相続</option>
+              <option value="growth">投資・事業拡大の判断</option>
+            </select>
+          </div>
+          <button type="submit" class="sim-submit">アドバイザリー価値を試算する</button>
+          <p class="sim-hint">※金額の目安は「年商」と「現在の顧問料」から算出します。「経営課題」は、下記の検討ポイント（内容）の表示切り替えに使用します。</p>
+        </form>
+
+        <div id="simResult" class="sim-result" hidden>
+          <div class="sim-result-head">
+            <span class="sim-dot"></span>
+            <span>試算結果 — 担当税理士による確認前の目安です</span>
+          </div>
+          <div class="sim-compare">
+            <div class="sim-compare-col">
+              <span class="sim-compare-label">現在の月額顧問料</span>
+              <span class="sim-compare-value" id="resCurrent">—</span>
+            </div>
+            <div class="sim-compare-arrow">→</div>
+            <div class="sim-compare-col highlight">
+              <span class="sim-compare-label">アドバイザリー提案額の目安（月額）</span>
+              <span class="sim-compare-value" id="resProposed">—</span>
+              <span class="sim-compare-sub" id="resRange">—</span>
+            </div>
+          </div>
+          <div class="sim-points">
+            <h3>AIが検出した検討余地のある項目（例）</h3>
+            <ul id="simPointsList"></ul>
+          </div>
+          <p class="sim-note">※本試算は、海外の同種AI導入事例（既存クライアント平均+109%の実績）を基準に、年商規模に応じて保守的な範囲で機械的に算出した参考値です。個別の適用可否・正式な金額は、税理士による診断で確定します。特定の節税効果や成果を保証するものではありません。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>面談での使われ方</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span>面談前に、AIが顧問先の基礎データを整理</li>
+        <li><span class="step-num">2</span>面談中、「アドバイザリー価値を試算する」でその場で数字を可視化</li>
+        <li><span class="step-num">3</span>具体的な金額を見ながら、税理士が提案内容を説明</li>
+        <li><span class="step-num">4</span>ご契約後は、税務リサーチAIが調査を高速化し迅速に対応</li>
+      </ol>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: STAFF VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">事務所スタッフ向け</p>
+        <h1>AIアドバイザリー・コックピット</h1>
+        <p class="lede">面談前の準備から提案後のリサーチまで、日々の事務作業をどれだけ支援できているかをまとめました。数値の最終判断・入力チェックは、これまで通りスタッフが行います。</p>
+      </div>
+      <nav class="staff-subnav" role="tablist" aria-label="スタッフ向け画面切替">
+        <button class="subtab active" data-panel="home" role="tab" aria-selected="true">ホーム</button>
+        <button class="subtab" data-panel="analysis" role="tab" aria-selected="false">分析</button>
+        <button class="subtab" data-panel="settings" role="tab" aria-selected="false">設定</button>
+      </nav>
+    </section>
+
+    <!-- ---- STAFF: HOME PANEL ---- -->
+    <section id="panel-home" class="staff-panel active">
+      <section class="cta-banner">
+        <div>
+          <h2>これから面談ですか？</h2>
+          <p>面談用の試算シミュレーターをすぐに開けます。クライアントの前でそのまま操作できる画面です。</p>
+        </div>
+        <button type="button" id="openSimFromStaff" class="cta-btn">面談用シミュレーターを開く</button>
+      </section>
+
+      <section class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">今月のアドバイザリー面談件数</span>
+          <span class="stat-value">42<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">前月比 +6件</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">AIが試算を作成した面談</span>
+          <span class="stat-value">37<span class="stat-unit">件</span></span>
+          <span class="stat-delta">全体の 88%</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">税理士による最終確認待ち</span>
+          <span class="stat-value">5<span class="stat-unit">件</span></span>
+          <span class="stat-delta">全て提案前に確認予定</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">一次リサーチをAIに依頼した件数</span>
+          <span class="stat-value">61<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">今週 +14件</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>クライアント平均月間請求額の推移</h2>
+          <span class="panel-note">導入前後の実績イメージ（海外事例ベース）</span>
+        </div>
+        <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>本日の対応待ちタスク</h2>
+          <span class="panel-note">AIが下書きを用意した案件のみ表示</span>
+        </div>
+        <ul class="task-list" id="taskList"></ul>
+      </section>
+
+      <section class="panel safety-panel">
+        <div class="panel-head">
+          <h2>ミス防止の仕組み</h2>
+        </div>
+        <p class="qual-note">AIが作成するのはあくまで「下書き」です。金額・税務判断を含む内容は、提出前に必ず税理士またはレビュー担当者の確認を経ます。試算の元になった入力データ（年商・現在の顧問料など）と計算根拠は画面上でいつでも確認でき、数字だけが根拠なく独り歩きすることはありません。</p>
+      </section>
+    </section>
+
+    <!-- ---- STAFF: ANALYSIS PANEL ---- -->
+    <section id="panel-analysis" class="staff-panel">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>顧客単価 Before / After（海外導入事例）</h2>
+          <span class="panel-note">Thomson Reuters社ケーススタディに基づく参考値。単位は米ドル。スケールが大きく異なるため2つのグラフに分けています。</span>
+        </div>
+        <div class="analysis-charts">
+          <div>
+            <div class="chart-wrap chart-wrap-sm"><canvas id="existingChart"></canvas></div>
+            <div class="analysis-note-card">
+              <h3>既存クライアント（平均月額請求額）</h3>
+              <p><strong>$146 → $305</strong>（約2.1倍 / +109%）</p>
+              <p class="muted">従来からのアドバイザリー契約クライアントの平均値。</p>
+            </div>
+          </div>
+          <div>
+            <div class="chart-wrap chart-wrap-sm"><canvas id="newClientChart"></canvas></div>
+            <div class="analysis-note-card">
+              <h3>新規クライアント（契約後12か月平均）</h3>
+              <p><strong>$573 → $4,588</strong>（約8倍 / +700%）</p>
+              <p class="muted">買収により新たに加わった顧客層の、契約後12か月間の平均請求額。伸び幅が大きい層のため参考値としてご覧ください。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>未経験スタッフでも品質を再現できたか</h2>
+          <span class="panel-note">定量データではなく、事例からの定性的な傾向です</span>
+        </div>
+        <p class="qual-note">アドバイザリー未経験だった買収先のスタッフも、AIが土台となる試算・下調べを用意することで、経験豊富なスタッフと近い水準の提案を再現できたと報告されています。具体的な改善率は事例内で公表されていないため、ここでは数値化していません。</p>
+      </section>
+    </section>
+
+    <!-- ---- STAFF: SETTINGS PANEL ---- -->
+    <section id="panel-settings" class="staff-panel">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>アドバイザリーメニュー設定</h2>
+          <span class="panel-note">面談で提示するメニューのオン・オフ（デモのため保存はされません）</span>
+        </div>
+        <ul class="toggle-list">
+          <li><span>節税・税務プランニング</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>資金繰り・資金調達支援</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>事業承継・相続コンサルティング</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>投資・設備投資の意思決定支援</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>連携サービス</h2>
+          <span class="panel-note">外部AIサービスとの連携設定（デモのため実際には接続しません）</span>
+        </div>
+        <ul class="toggle-list">
+          <li><span>アドバイザリー試算AI</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>税務リサーチAIアシスタント</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>会計システム連携</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></li>
+          <li><span>電子申告データ連携</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>担当者設定</h2>
+          <span class="panel-note">面談を担当するスタッフの一覧（サンプルデータ）</span>
+        </div>
+        <ul class="staff-list">
+          <li><span class="avatar">佐</span><div><strong>佐藤 亮子</strong><span class="muted">税理士 / アドバイザリー統括</span></div><button class="ghost-btn" type="button">編集</button></li>
+          <li><span class="avatar">田</span><div><strong>田村 慎一</strong><span class="muted">税理士</span></div><button class="ghost-btn" type="button">編集</button></li>
+          <li><span class="avatar">中</span><div><strong>中野 美咲</strong><span class="muted">スタッフ（買収統合チーム）</span></div><button class="ghost-btn" type="button">編集</button></li>
+        </ul>
+      </section>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、海外の税理士・会計事務所におけるAIアドバイザリー導入事例（米国、Thomson Reuters社「Ready to Advise」等のケーススタディ）を参考に構成した架空のシミュレーションです。事務所名・登場人物・面談コメント・一部の数値は仮のものであり、実在の企業・個人とは関係ありません。シミュレーターの試算結果は目安であり、税務上の助言や成果を保証するものではありません。</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
