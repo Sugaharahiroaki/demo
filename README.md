@@ -17,3 +17,4 @@
 | [apps/dental-ai-treatment-consent](apps/dental-ai-treatment-consent) | 病院関係（歯科） | 歯科医院（米国カリフォルニア州／Overjet）－AI画像診断で治療同意率2倍 |
 | [apps/dental-ai-cavity-detection](apps/dental-ai-cavity-detection) | 病院関係（歯科） | 歯科クリニック（英国／Pearl）－AI画像診断でX線見逃し虫歯を73%多く発見 |
 | [apps/ai-leasing-assistant-kit](apps/ai-leasing-assistant-kit) | 不動産管理・仲介 | 集合住宅管理会社（米国／Funnel「Kit」）－AIバーチャルリーシングアシスタントで時間外の内見予約を自動化 |
+| [apps/harvey-ai-dispute-case-review](apps/harvey-ai-dispute-case-review) | 税理士・社労士・法律事務所 | 建設紛争コンサルティング会社（グローバル200名超／Harvey AI）－ケース処理能力35%増、レビュー日数を短縮 |

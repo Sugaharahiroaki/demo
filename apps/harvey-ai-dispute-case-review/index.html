@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harvey AI 導入デモ | Draycott Projects Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">DP</span>
+    <div>
+      <div class="brand-name">Draycott Projects Group</div>
+      <div class="brand-sub">建設紛争コンサルティング「Harvey AI」導入デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="director" role="tab" aria-selected="true">経営層・クライアント向け</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">コンサルタント・スタッフ向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: CLIENT / MANAGEMENT VIEW ============ -->
+  <section id="view-director" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">中東拠点・グローバル200名超の建設紛争コンサルティングファームの実績をもとにしたデモ</p>
+        <h1>7〜10日かかっていた初期レビューが、<br>数分〜数時間へ。</h1>
+        <p class="lede">建設紛争・仲裁案件の初期段階では、大量の請求書類・契約書を読み解くだけで多くの時間を要します。Harvey AIを全拠点に導入したことで、この初期ケースレビューが劇的にスピードアップし、組織全体のケース処理能力は35%増加。$133M規模の大型仲裁案件でも、同じ体制で対応した実績があります。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num trust-num-text">7〜10日→数分〜数時間</span><span class="trust-label">初期ケースレビュー期間</span></div>
+          <div class="trust-item"><span class="trust-num">+35%</span><span class="trust-label">ケース処理能力の増加</span></div>
+          <div class="trust-item"><span class="trust-num">$133M</span><span class="trust-label">適用実績のある大型仲裁案件の規模</span></div>
+        </div>
+        <p class="hero-source-note">※海外の建設紛争コンサルティングファーム(従業員200名超・中東/インド/欧州/東南アジア展開)の公表実績をもとにしたデモです。詳しい内訳は本ページ下部でご説明しています。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="gauge-frame">
+          <svg viewBox="0 0 200 120" class="gauge-svg">
+            <path d="M20,110 A80,80 0 0 1 180,110" fill="none" stroke="var(--stone-100)" stroke-width="14" stroke-linecap="round"></path>
+            <path d="M20,110 A80,80 0 0 1 180,110" fill="none" stroke="var(--rust-600)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="163.3" class="gauge-arc"></path>
+          </svg>
+          <div class="gauge-label">
+            <span class="gauge-num">+35%</span>
+            <span class="gauge-sub">ケース処理能力</span>
+          </div>
+        </div>
+        <div class="region-strip" aria-label="導入拠点">
+          <span class="region-pill">UAE(本部)</span>
+          <span class="region-pill">インド</span>
+          <span class="region-pill">欧州</span>
+          <span class="region-pill">東南アジア</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel known-panel">
+      <div class="panel-head">
+        <h2>この事例で分かっていること／非公開のこと</h2>
+      </div>
+      <div class="known-grid">
+        <div class="known-col known-yes">
+          <span class="known-col-title">✓ 分かっている事実</span>
+          <ul>
+            <li>初期ケースレビュー期間が7〜10日→数分〜数時間に短縮</li>
+            <li>専門家1人あたり週約8時間の作業時間を削減</li>
+            <li>組織全体のケース処理能力(キャパシティ)が35%増加</li>
+            <li>$133M規模の大型仲裁案件でも同じ体制で活用</li>
+            <li>UAEを拠点に、インド・欧州・東南アジアの拠点でも導入</li>
+          </ul>
+        </div>
+        <div class="known-col known-no">
+          <span class="known-col-title">— 非公開の情報</span>
+          <ul>
+            <li>コスト削減額の具体的な数値</li>
+            <li>売上・受任率(成約率)への影響の数値</li>
+            <li>拠点数・国別の詳細な内訳</li>
+          </ul>
+          <p class="known-note">本デモでは、ない数字を作らず、公開されている事実だけでご判断いただけるように構成しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel challenge-panel">
+      <h2>導入前の課題</h2>
+      <p><strong>建設紛争は、請求書類・契約書の分量そのものが交渉のボトルネックになりがちです。</strong>案件を受任してから全体像を把握するまでの初期ケースレビューだけで7〜10日を要しており、これが対応できる案件数の上限を事実上決めてしまっていました。案件が大型・複雑になるほど、このボトルネックは深刻になります。</p>
+    </section>
+
+    <section class="panel capacity-sim">
+      <div class="panel-head">
+        <h2>ケース処理能力 シミュレーター</h2>
+        <span class="panel-note">実績値をもとにした概算</span>
+      </div>
+      <p class="sim-desc">この事例で報告されている「ケース処理能力35%増加」を根拠に、貴社の現在の月間対応ケース数から、Harvey AI導入後に対応可能になる目安のケース数を試算します。</p>
+      <div class="sim-controls">
+        <label for="caseInput">現在の月間対応ケース数</label>
+        <input type="range" id="caseRange" min="1" max="60" value="20" step="1">
+        <input type="number" id="caseInput" min="1" max="300" value="20">
+        <span class="sim-unit">件/月</span>
+      </div>
+      <div class="sim-result-grid">
+        <div class="sim-result">
+          <span class="sim-result-label">導入後の目安対応可能ケース数</span>
+          <span class="sim-result-value" id="simNewCapacity">27件/月</span>
+        </div>
+        <div class="sim-result sim-result-accent">
+          <span class="sim-result-label">追加で対応できる目安件数</span>
+          <span class="sim-result-value" id="simAdditional">+7件/月</span>
+          <span class="sim-result-sub" id="simAnnual">年間換算 約84件の追加対応が可能に</span>
+        </div>
+      </div>
+      <div class="sim-bar-compare" aria-hidden="true">
+        <div class="sim-bar-row">
+          <span class="sim-bar-label">導入前</span>
+          <div class="sim-bar-track"><div class="sim-bar-fill before" id="simBarBefore"></div></div>
+        </div>
+        <div class="sim-bar-row">
+          <span class="sim-bar-label">導入後</span>
+          <div class="sim-bar-track"><div class="sim-bar-fill after" id="simBarAfter"></div></div>
+        </div>
+      </div>
+      <p class="sim-caveat">※ 海外の建設紛争コンサルティングファームの実績(ケース処理能力35%増)をもとにした比例試算です。実際の増加幅は案件の複雑性・体制により変動します。</p>
+    </section>
+
+    <section class="panel review-timeline">
+      <div class="panel-head">
+        <h2>初期ケースレビュー期間 Before / After</h2>
+        <span class="panel-note">概念図・実測の比例尺度ではありません</span>
+      </div>
+      <p class="sim-desc">実際に報告されている変化は「7〜10日 → 数分〜数時間」です。日数と時間を同一の目盛りで正確に比例させると図が成立しないため、下図は変化の大きさを象徴的に示したイメージ図です。</p>
+      <div class="timeline-track-wrap">
+        <div class="timeline-row">
+          <span class="timeline-row-label">導入前</span>
+          <div class="timeline-track before-track">
+            <span class="timeline-fill before-fill"></span>
+            <span class="timeline-value">7〜10日</span>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <span class="timeline-row-label">導入後</span>
+          <div class="timeline-track after-track">
+            <span class="timeline-fill after-fill"></span>
+            <span class="timeline-value after-value">数分〜数時間</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel arbitration-panel">
+      <div class="panel-head">
+        <h2>大型・複雑案件への適用実績</h2>
+        <span class="panel-note">スケールを問わない体制</span>
+      </div>
+      <div class="arbitration-layout">
+        <div class="arbitration-stat">
+          <span class="arbitration-num">$133M</span>
+          <span class="arbitration-jpy">(参考換算 1ドル145円 ≒ 約193億円)</span>
+          <span class="arbitration-label">適用実績のある大型仲裁案件の規模</span>
+        </div>
+        <p class="arbitration-desc">建設紛争では、請求書類・契約書が数千ページに及ぶ大型仲裁案件も珍しくありません。本事例では、$133M規模(請求金額ベース)の大型仲裁案件においても、他の案件と同じHarvey AI活用体制で書類レビューを進めた実績が報告されています。案件の規模が大きくなるほど、レビューの初速の差が交渉力の差につながります。</p>
+      </div>
+      <p class="arbitration-note">※ 具体的な受任結果・仲裁の勝敗・和解額等の数値は非公開です。ここでは「案件の規模」に関する事実のみを扱っています。</p>
+    </section>
+
+    <section class="outcomes-grid">
+      <div class="outcome-card">
+        <span class="outcome-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z"/></svg>
+        </span>
+        <h3>初期レビューが数分〜数時間に</h3>
+        <p>大量の請求書類・契約書をHarveyが要約。専門家は要点の確認から着手できるため、初動が大きく早まります。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 20V10h4v10H4zm6 0V4h4v16h-4zm6 0v-7h4v7h-4z"/></svg>
+        </span>
+        <h3>ケース処理能力が35%増加</h3>
+        <p>同じ人員体制のまま、より多くの案件に対応可能に。受任できる案件数の上限そのものが引き上がります。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.5 0 2.9 2.5 3.6 6H8.4c.7-3.5 2.1-6 3.6-6zM4.3 13h4.1c.1 1.7.4 3.2.9 4.4A8 8 0 014.3 13zm0-2a8 8 0 015-6.4c-.5 1.2-.8 2.7-.9 4.4H4.3v2zm10.4 8.4c.5-1.2.8-2.7.9-4.4h4.1a8 8 0 01-5 6.4zM15.6 11c-.1-1.7-.4-3.2-.9-4.4a8 8 0 015 4.4h-4.1zM8.4 13h7.2c-.7 3.5-2.1 6-3.6 6s-2.9-2.5-3.6-6z"/></svg>
+        </span>
+        <h3>200名超・4リージョン体制</h3>
+        <p>UAE・インド・欧州・東南アジアの拠点をまたいで導入。$133M規模の大型仲裁案件にも同じ体制で対応します。</p>
+      </div>
+    </section>
+
+    <section class="quote-panel">
+      <blockquote>
+        “大型の仲裁案件では、初期段階でどれだけ早く全体像を把握できるかが、その後の交渉力を左右します。導入前は1週間以上かかっていた初期レビューが数時間で終わるようになり、これまで以上に多くの案件を自信を持ってお引き受けできるようになりました。”
+      </blockquote>
+      <span class="quote-attr">— パートナー・紛争解決部門責任者(デモ用の想定コメントです)</span>
+    </section>
+
+    <section class="panel safety-panel">
+      <h2>信頼性・専門家の関与について</h2>
+      <ul class="safety-list">
+        <li>Harvey AIによる要約・デポジション質問案の生成は、あくまで専門家の初期検討を支援する<strong>下書き</strong>です。最終的な法的判断・案件戦略の決定は、必ず担当コンサルタント・弁護士が行います。</li>
+        <li>既存の案件管理体制の中に組み込む形で導入するため、大幅な業務フロー変更を伴わずに利用を開始できます。</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: CONSULTANT / STAFF VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">現場コンサルタント・スタッフ向けプロダクト体験</p>
+        <h1>分厚い請求書類・契約書の山が、要約と質問案に変わるまで</h1>
+        <p class="lede">大量の請求書類・契約書を1件ずつ読み込む作業は、大きな負担でした。Harveyにアップロードすると、要点の要約とデポジション(証言録取)質問案のたたき台が自動で用意されます。最終確認は必ず専門家が行うので、精度への不安もそのまま解消しやすくなっています。下の画面を実際に操作して体験してみてください。</p>
+      </div>
+    </section>
+
+    <nav class="screen-switch" role="tablist" aria-label="画面切替">
+      <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="screen-tab" data-screen="review" role="tab" aria-selected="false">ケースレビュー</button>
+      <button class="screen-tab" data-screen="settings" role="tab" aria-selected="false">設定</button>
+    </nav>
+
+    <!-- ---- STAFF: HOME ---- -->
+    <section id="staff-home" class="staff-screen active">
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">AI要約待ちの書類</span>
+          <span class="stat-value" id="statPending">4<span class="stat-unit">件</span></span>
+          <span class="stat-delta">アップロードするとすぐ解析されます</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">専門家レビュー待ちの質問案</span>
+          <span class="stat-value" id="statReview">2<span class="stat-unit">件</span></span>
+          <span class="stat-delta">デポジション質問案のご確認をお願いしています</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">対応完了ケース(今月)</span>
+          <span class="stat-value" id="statDone">9<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">処理能力35%増の体制で対応中</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>この画面で変わること</h2>
+          <span class="panel-note">コンサルタント・スタッフの皆さまへ</span>
+        </div>
+        <ol class="steps-vertical">
+          <li><span class="step-num">1</span><div><strong>請求書類・契約書をアップロード</strong>する — スキャンした書類一式を、この画面から取り込みます。</div></li>
+          <li><span class="step-num">2</span><div><strong>Harveyが要約と質問案を自動生成</strong>する — 数分〜数時間ほどで、要点とデポジション質問案の下書きが出そろいます。</div></li>
+          <li><span class="step-num">3</span><div><strong>専門家がレビュー</strong>する — 最終判断・確定は必ず担当コンサルタント・弁護士が行います。皆さまは進捗を確認するだけでOKです。</div></li>
+          <li><span class="step-num">4</span><div><strong>クライアントへ初期報告</strong>する — 確定した要点をもとに、初期報告メモをすぐにご案内できます。</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: CASE REVIEW ---- -->
+    <section id="staff-review" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>案件を選ぶ</h2>
+          <span class="panel-note">デモ用の仮想案件です</span>
+        </div>
+        <div class="case-picker" id="casePicker">
+          <button type="button" class="case-btn active" data-case="a">案件A：遅延損害請求</button>
+          <button type="button" class="case-btn" data-case="b">案件B：契約変更紛争</button>
+          <button type="button" class="case-btn" data-case="c">案件C：$133M規模の大型仲裁案件</button>
+        </div>
+      </div>
+
+      <div class="review-layout">
+        <div class="panel docs-panel">
+          <div class="panel-head">
+            <h2>請求書類・契約書</h2>
+            <span class="panel-note" id="docsStatus">未アップロード</span>
+          </div>
+          <div class="docs-frame" id="docsFrame">
+            <div class="docs-placeholder" id="docsPlaceholder">
+              <svg viewBox="0 0 24 24" class="upload-icon"><path d="M12 3l5 5h-3v6h-4V8H7l5-5zM5 19h14v2H5v-2z"/></svg>
+              <p id="docsCountText">まだ書類がアップロードされていません</p>
+              <button type="button" class="btn-primary" id="uploadBtn">書類をアップロード</button>
+            </div>
+            <div class="docs-view" id="docsView" hidden>
+              <div class="doc-stack" id="docStack" aria-hidden="true"></div>
+              <p class="docs-summary-line" id="docsSummaryLine"></p>
+              <button type="button" class="btn-secondary" id="analyzeBtn">Harveyで要約・質問案を生成</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel findings-panel">
+          <div class="panel-head">
+            <h2>Harveyの出力（下書き）</h2>
+            <span class="panel-note">最終確認は専門家が行います</span>
+          </div>
+          <p class="reassure-note">契約条項や専門用語が並びますが、覚える必要はありません。Harveyが生成するのはあくまで下書きです。要約・質問案の内容は、必ず担当コンサルタント・弁護士が確認してから確定するため、そのまま外部に出ることはありません。</p>
+
+          <h3 class="findings-subhead">要約ポイント</h3>
+          <ul class="findings-list" id="summaryList">
+            <li class="findings-empty">書類をアップロードし「Harveyで要約・質問案を生成」を押すと、ここに要点が表示されます。</li>
+          </ul>
+
+          <h3 class="findings-subhead">デポジション質問案</h3>
+          <ul class="findings-list" id="questionsList"></ul>
+
+          <div class="review-row" id="reviewRow" hidden>
+            <button type="button" class="btn-secondary" id="reviewBtn">専門家レビュー完了としてマーク（デモ）</button>
+            <span class="review-status" id="reviewStatus"></span>
+          </div>
+
+          <div class="patient-note" id="memoNote" hidden>
+            <div class="panel-head">
+              <h3>クライアント向け初期報告メモ（確定済み）</h3>
+            </div>
+            <p id="memoNoteText"></p>
+            <button type="button" class="btn-ghost" id="copyNoteBtn">このメモをコピー</button>
+            <span class="copy-feedback" id="copyFeedback"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: SETTINGS ---- -->
+    <section id="staff-settings" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>拠点別 Harvey導入状況</h2>
+          <span class="panel-note">見た目の操作のみ（デモ）</span>
+        </div>
+        <p class="reassure-note">通常はグループ本部・拠点責任者が設定する画面です。現場コンサルタントの皆さまが日常的に触れる場面は多くありません。</p>
+        <div class="table-wrap">
+          <table class="settings-table">
+            <thead>
+              <tr><th>拠点</th><th>Harvey連携</th><th>案件管理システム連携</th><th>状態</th></tr>
+            </thead>
+            <tbody id="regionSettingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>通知設定</h2>
+          <span class="panel-note">コンサルタント・スタッフ向け</span>
+        </div>
+        <ul class="toggle-list">
+          <li>
+            <div><strong>AI要約完了時に通知</strong><span class="toggle-desc">要約・質問案の下書きが出そろったタイミングでお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleFindings"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>専門家レビュー完了を通知</strong><span class="toggle-desc">クライアントへの初期報告準備が整ったらお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleReview"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>大型案件（請求額$50M相当以上）を優先表示</strong><span class="toggle-desc">大型仲裁案件を見逃さないよう、キューの上位に表示します</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleLarge"><span class="slider"></span></label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、海外の建設紛争コンサルティングファーム(中東拠点・グローバル200名超・建設紛争専門)におけるHarvey AI導入事例をもとに構成した架空のシミュレーションです。登場する企業名「Draycott Projects Group」・人物・案件内容・書類の記載・画面上の一部数値はすべて仮のものであり、実在の組織・個人とは関係ありません。初期ケースレビュー期間(7〜10日→数分〜数時間)、ケース処理能力35%増加、$133M規模の大型仲裁案件への適用、専門家1人あたり週約8時間の削減は、報告されている実績をもとにしています。コスト削減額・売上や受任率への影響については元事例で公表されていないため、本デモでは具体的な数値を記載していません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
