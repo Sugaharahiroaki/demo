@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl 導入デモ | Chapel Yard Dental Practice</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">CY</span>
+    <div>
+      <div class="brand-name">Chapel Yard Dental Practice</div>
+      <div class="brand-sub">AI画像診断アシスト「Pearl (Second Opinion)」導入デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="director" role="tab" aria-selected="true">院長向け</button>
+    <button class="tab" data-persona="staff" role="tab" aria-selected="false">受付・歯科衛生士向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: DIRECTOR / SOLO OWNER VIEW ============ -->
+  <section id="view-director" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">英国・個人経営の歯科医院の導入事例をもとにしたデモ</p>
+        <h1>145枚のレントゲンから、<br>AIは44件の初期う蝕を見つけた。</h1>
+        <p class="lede">目視診断で発見できていたのは12件。同じ画像をPearl (Second Opinion) で解析すると44件に増えました。相談できる同僚がいない一人医院だからこそ、「もう一人の目」としてのAIの価値がはっきり出たケースです。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">145枚</span><span class="trust-label">解析したレントゲン</span></div>
+          <div class="trust-item"><span class="trust-num">44件</span><span class="trust-label">AIが検出した初期う蝕</span></div>
+          <div class="trust-item"><span class="trust-num">+73%</span><span class="trust-label">目視のみでは見逃していた割合</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="find-icon">
+          <circle cx="100" cy="100" r="92" class="find-ring"></circle>
+          <path class="find-tooth" d="M100 58c-10 0-16 6-24 6-9 0-15-7-15 8 0 20 8 55 20 55 8 0 8-16 19-16s11 16 19 16c12 0 20-35 20-55 0-15-6-8-15-8-8 0-14-6-24-6z"></path>
+          <circle class="find-dot dot-a" cx="86" cy="96" r="6"></circle>
+          <circle class="find-dot dot-b" cx="118" cy="112" r="4.5"></circle>
+          <g class="find-glass">
+            <circle cx="146" cy="72" r="22"></circle>
+            <line x1="162" y1="88" x2="178" y2="104"></line>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="panel known-panel">
+      <div class="panel-head">
+        <h2>この事例で分かっていること／非公開のこと</h2>
+      </div>
+      <div class="known-grid">
+        <div class="known-col known-yes">
+          <span class="known-col-title">分かっている事実</span>
+          <ul>
+            <li>145枚のX線画像をPearlが解析し、44件の初期う蝕を検出</li>
+            <li>同じ画像を従来の目視診断で確認したところ、発見できていたのは12件</li>
+            <li>導入前は患者の65%がX線画像の内容を理解できず、59%が診断結果を信頼していなかった</li>
+            <li>予防関連商品(フッ素洗口液・専用フロス)や定期メンテナンス来院の売上が増加(金額は非公開)</li>
+          </ul>
+        </div>
+        <div class="known-col known-no">
+          <span class="known-col-title">非公開・不明の情報</span>
+          <ul>
+            <li>診断・説明にかかる時間の削減幅</li>
+            <li>コスト削減の具体的な金額</li>
+            <li>予防関連売上・成約率改善の具体的な金額</li>
+            <li>導入後の患者理解度・信頼度の数値(改善の方向性のみ報告)</li>
+          </ul>
+          <p class="known-note">本デモでは、ない数字を作らず、公開されている事実だけをもとに構成しています。以降のシミュレーターも、この事例の検出比率から機械的に算出した概算であることを明記しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel challenge-panel">
+      <h2>導入前の課題 ― 一人医院ゆえの「伝わらない」壁</h2>
+      <p><strong>初期のう蝕は、目視だけでは見つけにくいことがあります。</strong>相談できる同僚がいない個人医院では、その判断はすべて院長一人にかかっていました。加えて、X線画像を見せても患者の65%が内容を理解できず、59%が診断結果そのものを信頼していなかったという課題もありました。「見つける力」と「伝える力」、両方の壁が同時にあったケースです。</p>
+    </section>
+
+    <section class="panel detect-panel">
+      <div class="panel-head">
+        <h2>検出数 Before / After ― 145枚のレントゲンで何が変わったか</h2>
+        <span class="panel-note">実績データ</span>
+      </div>
+      <p class="sim-desc">同じ145枚のX線画像を、まず歯科医師の目視で確認し、続けてPearlのAI解析にかけました。ボタンを押すと、その差が棒グラフで表示されます。</p>
+      <div class="detect-chart-wrap">
+        <div class="detect-chart" id="detectChart">
+          <div class="detect-bar-group">
+            <div class="detect-bar-track"><div class="detect-bar before" id="barBefore"></div></div>
+            <span class="detect-bar-value" id="valBefore">0件</span>
+            <span class="detect-bar-label">従来の目視診断</span>
+          </div>
+          <div class="detect-bar-group">
+            <div class="detect-bar-track"><div class="detect-bar after" id="barAfter"></div></div>
+            <span class="detect-bar-value" id="valAfter">0件</span>
+            <span class="detect-bar-label">Pearl AI解析</span>
+          </div>
+        </div>
+        <div class="detect-callout" id="detectCallout">
+          <span class="detect-callout-num">+73%</span>
+          <span class="detect-callout-text">AIが検出した44件のうち32件(約73%)は、目視診断では見逃されていました。</span>
+        </div>
+      </div>
+      <button type="button" class="btn-primary" id="runDetectBtn">解析結果を表示する</button>
+      <p class="sim-caveat">※ 145枚のX線画像に対する実績値です(目視12件 / AI解析44件)。件数はいずれも「初期う蝕の候補」であり、最終的な治療要否の判断は歯科医師が行います。</p>
+    </section>
+
+    <section class="panel speed-sim">
+      <div class="panel-head">
+        <h2>見逃し機会 簡易シミュレーター</h2>
+        <span class="panel-note">この事例の検出比率をもとにした概算</span>
+      </div>
+      <p class="sim-desc">貴院の月間のX線撮影枚数を入力すると、この事例の検出比率(目視8.3% / AI解析30.3%)をもとに、月あたり何件の初期う蝕がAIなしでは見逃されていた可能性があるかを機械的に試算します。あくまで1医院の実績比率を当てはめた参考値であり、貴院での実測値を保証するものではありません。</p>
+      <div class="sim-controls">
+        <label for="xrayInput">月間のX線撮影枚数</label>
+        <input type="range" id="xrayRange" min="10" max="400" value="145" step="5">
+        <input type="number" id="xrayInput" min="10" max="2000" value="145">
+        <span class="sim-unit">枚/月</span>
+      </div>
+      <div class="sim-result-grid">
+        <div class="sim-result">
+          <span class="sim-result-label">目視診断での想定発見数</span>
+          <span class="sim-result-value" id="simBefore">12件</span>
+        </div>
+        <div class="sim-result highlight">
+          <span class="sim-result-label">AI解析での想定発見数</span>
+          <span class="sim-result-value" id="simAfter">44件</span>
+        </div>
+        <div class="sim-result">
+          <span class="sim-result-label">月あたりの見逃し想定件数</span>
+          <span class="sim-result-value" id="simGap">32件</span>
+        </div>
+      </div>
+      <p class="sim-caveat">※ Chapel Yard Dental Practiceの実績(145枚／目視12件／AI解析44件)を比率のまま拡大縮小した概算です。撮影機器・患者層により実際の件数は変動します。</p>
+    </section>
+
+    <section class="outcomes-grid">
+      <div class="outcome-card">
+        <span class="outcome-icon">🔎</span>
+        <h3>見逃しリスクの低減</h3>
+        <p>初期う蝕は放置すると進行し、後々の治療負担も患者の不満・クレームリスクも大きくなります。もう一人の目としてAIが一次チェックすることで、一人医院でも見逃しに気づきやすくなります。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">🌱</span>
+        <h3>予防関連売上の機会拡大</h3>
+        <p>早期発見できた患者にフッ素洗口液・専用フロスや定期メンテナンス来院を案内しやすくなり、実際にこれらの売上が増加したと報告されています(具体的な金額は非公開)。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">🤝</span>
+        <h3>患者との信頼関係の立て直し</h3>
+        <p>画像を理解できなかった65%、診断を信頼していなかった59%の患者に対し、カラーコード表示を見せながら説明することで「なぜその治療が必要か」を共有しやすくなります。</p>
+      </div>
+    </section>
+
+    <section class="quote-panel">
+      <blockquote>
+        “一人医院なので、レントゲンを見て迷ったときに相談できる同僚がいませんでした。Pearlの解析結果をモニターに映しながら患者さんに説明するようになってから、うなずきながら聞いてくださる方が増えたと感じています。”
+      </blockquote>
+      <span class="quote-attr">— 院長(デモ用の想定コメントです)</span>
+    </section>
+
+    <section class="panel safety-panel">
+      <h2>安全性・臨床上の位置づけについて</h2>
+      <ul class="safety-list">
+        <li>Pearl (Second Opinion) はX線画像に対する<strong>臨床アシスト情報の提示</strong>を行うものであり、最終的な診断・治療方針の決定は必ず歯科医師が行います。</li>
+        <li>本デモの検出数(145枚／目視12件／AI解析44件)は実績値ですが、1医院・1回の分析結果であり、すべての医院・患者層に同じ数値が当てはまることを示すものではありません。</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: FRONT DESK / DENTAL HYGIENIST VIEW ============ -->
+  <section id="view-staff" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">受付・歯科衛生士向けプロダクト体験</p>
+        <h1>「見えない所見」を、その場で色分けして見せられる</h1>
+        <p class="lede">難しい専門ツールではありません。レントゲンを取り込むと、Pearlが気になる箇所をカラーコードのポップアップで示してくれるので、歯科医師の確認を経たあと、モニターを一緒に見ながら患者様にご説明いただけます。下の画面を実際に操作して体験してみてください。</p>
+      </div>
+    </section>
+
+    <nav class="screen-switch" role="tablist" aria-label="画面切替">
+      <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="screen-tab" data-screen="analysis" role="tab" aria-selected="false">患者説明シミュレーション</button>
+      <button class="screen-tab" data-screen="settings" role="tab" aria-selected="false">表示設定</button>
+    </nav>
+
+    <!-- ---- STAFF: HOME ---- -->
+    <section id="staff-home" class="staff-screen active">
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">本日のAI解析件数</span>
+          <span class="stat-value" id="statPending">4<span class="stat-unit">件</span></span>
+          <span class="stat-delta">取り込むと数十秒で解析されます</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">歯科医師レビュー待ち</span>
+          <span class="stat-value" id="statReview">2<span class="stat-unit">件</span></span>
+          <span class="stat-delta">AI所見の確認をお願いしています</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">患者様へのご説明準備完了</span>
+          <span class="stat-value" id="statReady">1<span class="stat-unit">件</span></span>
+          <span class="stat-delta up">説明用メモも自動で用意されます</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>この画面で変わること</h2>
+          <span class="panel-note">受付・歯科衛生士の皆さまへ</span>
+        </div>
+        <ol class="steps-vertical">
+          <li><span class="step-num">1</span><div><strong>レントゲン画像を取り込む</strong> — 今まで通り撮影した画像を、この画面に取り込みます。</div></li>
+          <li><span class="step-num">2</span><div><strong>Pearlが色分けして解析</strong> — 数十秒ほどで、気になる箇所がカラーコードのポップアップで表示されます。</div></li>
+          <li><span class="step-num">3</span><div><strong>歯科医師がレビュー</strong> — 最終判断は必ず歯科医師が行います。皆さまは進捗を確認するだけでOKです。</div></li>
+          <li><span class="step-num">4</span><div><strong>モニターを見せながらご説明</strong> — 色分け表示と、平易な言葉に置き換えた説明メモを使ってご案内いただけます。</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: ANALYSIS / PATIENT EXPLANATION ---- -->
+    <section id="staff-analysis" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>患者ケースを選ぶ</h2>
+          <span class="panel-note">デモ用の仮想ケースです</span>
+        </div>
+        <div class="case-picker" id="casePicker">
+          <button type="button" class="case-btn active" data-case="a">患者A（30代）</button>
+          <button type="button" class="case-btn" data-case="b">患者B（50代）</button>
+          <button type="button" class="case-btn" data-case="c">患者C（70代）</button>
+        </div>
+      </div>
+
+      <div class="analysis-layout">
+        <div class="panel xray-panel">
+          <div class="panel-head">
+            <h2>レントゲン画像</h2>
+            <span class="panel-note" id="xrayStatus">未取り込み</span>
+          </div>
+          <div class="xray-frame" id="xrayFrame">
+            <div class="xray-placeholder" id="xrayPlaceholder">
+              <svg viewBox="0 0 24 24" class="upload-icon"><path d="M12 3l5 5h-3v6h-4V8H7l5-5zM5 19h14v2H5v-2z"/></svg>
+              <p>まだ画像が取り込まれていません</p>
+              <button type="button" class="btn-primary" id="uploadBtn">レントゲン画像を取り込む</button>
+            </div>
+            <div class="xray-view" id="xrayView" hidden>
+              <svg viewBox="0 0 320 160" class="xray-svg" id="xraySvg" aria-label="レントゲン画像のイメージ図">
+                <rect x="0" y="0" width="320" height="160" fill="#241c17"></rect>
+                <g id="toothRow" fill="#e9dcc9" opacity="0.9"></g>
+                <g id="findingMarkers"></g>
+              </svg>
+              <button type="button" class="btn-secondary" id="analyzeBtn">Pearlで解析する</button>
+            </div>
+          </div>
+          <div class="legend-strip" id="legendStrip" hidden>
+            <span class="legend-chip"><i class="swatch caries"></i>う蝕の疑い(要確認)</span>
+            <span class="legend-chip"><i class="swatch early"></i>初期う蝕(経過観察)</span>
+            <span class="legend-chip"><i class="swatch bone"></i>歯周・骨の所見</span>
+          </div>
+        </div>
+
+        <div class="panel findings-panel">
+          <div class="panel-head">
+            <h2>Pearl所見（臨床アシスト情報）</h2>
+            <span class="panel-note">最終判断は歯科医師が行います</span>
+          </div>
+          <p class="reassure-note">専門用語が並びますが、覚える必要はありません。色を見て「赤・オレンジ・紫のどれが出ているか」を患者様にお見せするだけで十分です。歯科医師の確認が済むと、下に患者様への説明メモが自動で用意されます。</p>
+          <ul class="findings-list" id="findingsList">
+            <li class="findings-empty">画像を取り込み「Pearlで解析する」を押すと、ここに所見が表示されます。</li>
+          </ul>
+
+          <div class="review-row" id="reviewRow" hidden>
+            <button type="button" class="btn-secondary" id="reviewBtn">歯科医師レビュー完了としてマーク（デモ）</button>
+            <span class="review-status" id="reviewStatus"></span>
+          </div>
+
+          <div class="patient-note" id="patientNote" hidden>
+            <div class="panel-head">
+              <h3>患者様説明用メモ（平易な言葉に変換済み）</h3>
+            </div>
+            <p id="patientNoteText"></p>
+            <button type="button" class="btn-ghost" id="copyNoteBtn">このメモをコピー</button>
+            <span class="copy-feedback" id="copyFeedback"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- STAFF: SETTINGS ---- -->
+    <section id="staff-settings" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>カラーコード表示のカスタマイズ</h2>
+          <span class="panel-note">見た目の操作のみ（デモ）</span>
+        </div>
+        <p class="reassure-note">患者様への説明画面に、どの所見をどの色で表示するかを調整できます。院内で表示ルールを統一しておくと、誰が説明しても迷いません。</p>
+        <div class="table-wrap">
+          <table class="settings-table">
+            <thead>
+              <tr><th>所見の種類</th><th>表示色</th><th>患者説明画面への表示</th></tr>
+            </thead>
+            <tbody id="colorSettingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>通知設定</h2>
+          <span class="panel-note">受付・歯科衛生士向け</span>
+        </div>
+        <ul class="toggle-list">
+          <li>
+            <div><strong>Pearl所見の候補が出たら通知</strong><span class="toggle-desc">解析が終わったタイミングでお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleFindings"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>歯科医師レビュー完了を通知</strong><span class="toggle-desc">患者様へのご説明準備が整ったらお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleReview"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>予防メニューの案内候補を自動表示</strong><span class="toggle-desc">初期う蝕が見つかった患者様に、フッ素洗口液・フロス・定期メンテナンスの案内候補を表示します</span></div>
+            <label class="switch"><input type="checkbox" checked id="togglePrevention"><span class="slider"></span></label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、英国の個人経営歯科医院におけるAI画像診断アシスト導入事例（Pearl (Second Opinion) ケーススタディ）をもとに構成した架空のシミュレーションです。登場する医院名「Chapel Yard Dental Practice」・院長のコメント・患者ケース・画面上の一部の数値はデモ用の仮のものであり、実在の医院・個人とは関係ありません。145枚のX線画像からAIが44件の初期う蝕を検出し、従来の目視診断による発見数12件と比較して約73%（32件）多く発見されたこと、導入前は患者の65%が画像を理解できず59%が診断結果を信頼していなかったこと、予防関連商品・定期メンテナンス来院の売上が増加したことは、公開されている事例をもとにした事実です。診断・説明にかかる時間の削減幅、コスト削減額、予防関連売上・成約率改善の具体的な金額は元事例で公表されていないため、本デモでは記載していません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -15,3 +15,4 @@
 | [apps/facial-ai-treatment-planner](apps/facial-ai-treatment-planner) | 美容クリニック | 美容クリニック（米国・カリフォルニア州／Ponce AI）－AIフェイシャル分析で45日間に患者単価33%増 |
 | [apps/submittal-ai-review](apps/submittal-ai-review) | 建設・専門工事 | 大手ゼネコン（米国／Trunk Tools）－提出書類の97%に不備発見、再提出サイクル50%短縮 |
 | [apps/dental-ai-treatment-consent](apps/dental-ai-treatment-consent) | 病院関係（歯科） | 歯科医院（米国カリフォルニア州／Overjet）－AI画像診断で治療同意率2倍 |
+| [apps/dental-ai-cavity-detection](apps/dental-ai-cavity-detection) | 病院関係（歯科） | 歯科クリニック（英国／Pearl）－AI画像診断でX線見逃し虫歯を73%多く発見 |
