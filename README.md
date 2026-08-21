@@ -16,3 +16,4 @@
 | [apps/submittal-ai-review](apps/submittal-ai-review) | 建設・専門工事 | 大手ゼネコン（米国／Trunk Tools）－提出書類の97%に不備発見、再提出サイクル50%短縮 |
 | [apps/dental-ai-treatment-consent](apps/dental-ai-treatment-consent) | 病院関係（歯科） | 歯科医院（米国カリフォルニア州／Overjet）－AI画像診断で治療同意率2倍 |
 | [apps/dental-ai-cavity-detection](apps/dental-ai-cavity-detection) | 病院関係（歯科） | 歯科クリニック（英国／Pearl）－AI画像診断でX線見逃し虫歯を73%多く発見 |
+| [apps/ai-leasing-assistant-kit](apps/ai-leasing-assistant-kit) | 不動産管理・仲介 | 集合住宅管理会社（米国／Funnel「Kit」）－AIバーチャルリーシングアシスタントで時間外の内見予約を自動化 |

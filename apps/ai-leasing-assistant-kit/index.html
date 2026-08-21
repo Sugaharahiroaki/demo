@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kit 導入デモ | Rowan Residential Group</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">R</span>
+    <div>
+      <div class="brand-name">Rowan Residential Group</div>
+      <div class="brand-sub">AIバーチャルリーシングアシスタント「Kit」導入デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="renter" role="tab" aria-selected="true">物件を探している方向け</button>
+    <button class="tab" data-persona="agent" role="tab" aria-selected="false">リーシング担当者向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: PROSPECTIVE RENTER VIEW ============ -->
+  <section id="view-renter" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">米国・集合住宅管理会社の導入事例をもとにしたデモ</p>
+        <h1>内見の予約は、<br>夜10時でも待たされない。</h1>
+        <p class="lede">気になる部屋を見つけたのが夜でも休日でも、AIアシスタント「Kit」がその場で応対し、内見の日程を組んでくれます。営業時間を気にして問い合わせをためらう必要はもうありません。下のデモを実際に操作して体験してみてください。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">24時間365日</span><span class="trust-label">Kitが問い合わせに自動応答</span></div>
+          <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">問い合わせへの即時応答率</span></div>
+          <div class="trust-item"><span class="trust-num">70〜72%</span><span class="trust-label">内見予約のうち時間外にAIが設定した割合</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring-frame">
+          <div class="ring-glow"></div>
+          <svg viewBox="0 0 24 24" class="ring-icon"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.75 4v5.6l4.55 2.7-.75 1.25-5.3-3.15V6h1.5z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel pain-panel">
+      <h2>こんな経験はありませんか</h2>
+      <p><strong>「良さそう」と思った瞬間に問い合わせたのに、返事が来たのは翌営業日。</strong>その間に他の部屋を決めてしまった——賃貸物件探しではよくある話です。管理会社側から見ても、時間外の問い合わせに対応しきれず、見込みの高いお客様を取りこぼしてしまうことが課題でした。</p>
+    </section>
+
+    <!-- ---- CORE: Kit chat demo ---- -->
+    <section class="panel chat-panel">
+      <div class="panel-head">
+        <h2>Kitに今すぐチャットで内見予約</h2>
+        <span class="panel-note">実際の会話フローに基づく疑似体験デモ</span>
+      </div>
+      <p class="sim-desc">気になる部屋タイプを選んで、下のチャットで内見予約の流れを試してみてください。実際の入力・送信は行われません。</p>
+
+      <div class="unit-picker" id="unitPicker">
+        <button type="button" class="case-btn active" data-unit="studio">ワンルーム</button>
+        <button type="button" class="case-btn" data-unit="1br">1ベッドルーム</button>
+        <button type="button" class="case-btn" data-unit="2br">2ベッドルーム</button>
+      </div>
+
+      <div class="chat-widget">
+        <div class="chat-widget-head">
+          <div class="chat-agent">
+            <span class="chat-avatar">K</span>
+            <div>
+              <strong>Kit</strong>
+              <span>Rowan Residential Groupの AIリーシングアシスタント</span>
+            </div>
+          </div>
+          <span class="time-badge night" id="timeBadge">
+            <svg viewBox="0 0 24 24" class="badge-icon"><path d="M12.3 2a9.8 9.8 0 108.8 15.6 8 8 0 01-8.8-15.6z"/></svg>
+            現在 23:14（デモ）・営業時間外
+          </span>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-quick-replies" id="chatQuickReplies"></div>
+      </div>
+    </section>
+
+    <section class="outcomes-grid">
+      <div class="outcome-card">
+        <span class="outcome-icon">🌙</span>
+        <h3>24時間365日、待たせない</h3>
+        <p>営業時間外の問い合わせにもKitがその場で応答。「明日連絡します」で機会を逃すことがありません。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">⚡</span>
+        <h3>その場で内見予約が完了</h3>
+        <p>チャットで希望を伝えるだけで、空いている時間帯を提示。電話のやり取りや折り返し待ちは不要です。</p>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-icon">🙂</span>
+        <h3>しつこい売り込みはしません</h3>
+        <p>Kitは案内役に徹し、断れば引き下がります。人の担当者にいつでも切り替えることもできます。</p>
+      </div>
+    </section>
+
+    <section class="quote-panel">
+      <blockquote>
+        “深夜にたまたま見つけた物件にチャットで問い合わせたら、その場で翌朝の内見枠を提示してもらえました。もし翌営業日まで待たされていたら、別の部屋を契約していたと思います。”
+      </blockquote>
+      <span class="quote-attr">— 入居希望者様（デモ用の想定コメントです）</span>
+    </section>
+
+    <section class="panel safety-panel">
+      <h2>Kitについて知っておいていただきたいこと</h2>
+      <ul class="safety-list">
+        <li>Kitは<strong>AIによる自動応対</strong>であることを最初にお伝えします。人間のスタッフになりすますことはありません。</li>
+        <li>内見予約の設定が主な役割で、契約の判断を急かすような案内は行いません。ご希望に応じていつでも人間の担当者にお繋ぎできます。</li>
+        <li>チャットでいただいた情報は、物件を管理するRowan Residential Group内でのみ利用されます。</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: LEASING STAFF / AGENT VIEW ============ -->
+  <section id="view-agent" class="view">
+
+    <section class="b-hero">
+      <p class="eyebrow">リーシング担当者・マネージャー向け</p>
+      <h1>取りこぼしていた反響が、成約につながる数字に変わった</h1>
+      <p class="lede">Apartment List社の「Lea Light」が反響の初期対応と振り分けを行い、Funnel社の会話型AIアシスタント「Kit」が24時間365日、内見予約までを引き受けます。姉妹物件2件・90日間の比較検証で得られた実績を、ダッシュボードと分析画面でご覧ください。</p>
+    </section>
+
+    <nav class="screen-switch" role="tablist" aria-label="画面切替">
+      <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="screen-tab" data-screen="analysis" role="tab" aria-selected="false">分析</button>
+      <button class="screen-tab" data-screen="settings" role="tab" aria-selected="false">設定</button>
+    </nav>
+
+    <!-- ---- AGENT: HOME ---- -->
+    <section id="agent-home" class="staff-screen active">
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">問い合わせへの即時応答率</span>
+          <span class="stat-value">100<span class="stat-unit">%</span></span>
+          <span class="stat-delta up">90日間の比較検証期間中</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">時間外にAIが設定した内見予約</span>
+          <span class="stat-value">70〜72<span class="stat-unit">%</span></span>
+          <span class="stat-delta">内見予約全体に占める割合</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">ツアー→成約 転換率の改善</span>
+          <span class="stat-value">+50<span class="stat-unit">%</span></span>
+          <span class="stat-delta up">導入前と比べた相対的な向上</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">覆面調査（ミステリーショップ）</span>
+          <span class="stat-value">100<span class="stat-unit">/100</span></span>
+          <span class="stat-delta up">即時性・一貫性等 全項目満点</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Lea Light と Kit、それぞれの役割</h2>
+          <span class="panel-note">導入後のリード対応フロー</span>
+        </div>
+        <ol class="steps-vertical">
+          <li><span class="step-num">1</span><div><strong>反響が届く</strong> — ポータルサイトや物件サイトから問い合わせが入ります（時間帯を問いません）。</div></li>
+          <li><span class="step-num">2</span><div><strong>Lea Lightが初期対応・振り分け</strong> — Apartment List社の「Lea Light」が反響を受け取り、内容に応じて振り分けます。</div></li>
+          <li><span class="step-num">3</span><div><strong>Kitが会話で内見予約を設定</strong> — Funnel社のAIアシスタント「Kit」が24時間365日、チャットで内見の日程を調整します。</div></li>
+          <li><span class="step-num">4</span><div><strong>担当者に引き継ぎ</strong> — 予約確定後は現地の担当者に共有され、当日の案内に集中できます。</div></li>
+        </ol>
+      </div>
+
+      <section class="panel known-panel">
+        <div class="panel-head">
+          <h2>この事例で分かっていること／非公開のこと</h2>
+        </div>
+        <div class="known-grid">
+          <div class="known-col known-yes">
+            <span class="known-col-title">✓ 分かっている事実</span>
+            <ul>
+              <li>Funnel社の会話型AIアシスタント「Kit」とApartment List社の「Lea Light」を導入</li>
+              <li>姉妹物件2件で90日間の比較検証を実施</li>
+              <li>問い合わせへの即時応答率100%を達成</li>
+              <li>内見予約の70〜72%が営業時間外にAIによって設定された</li>
+              <li>ツアーから成約への転換率が導入前と比べ50%向上</li>
+              <li>覆面調査（ミステリーショップ）で即時性・一貫性・パーソナライズ・予約設定の全項目が100点満点</li>
+            </ul>
+          </div>
+          <div class="known-col known-no">
+            <span class="known-col-title">— 非公開の情報</span>
+            <ul>
+              <li>時間削減の具体的な数値</li>
+              <li>コスト削減の具体的な数値</li>
+              <li>対象物件の詳細な所在地・具体的な実施時期</li>
+              <li>入居率・成約件数など絶対数の実績</li>
+            </ul>
+            <p class="known-note">本デモでは、ない数字を作らず、公開されている事実だけでご判断いただけるように構成しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-panel">
+        <blockquote>
+          “夜間の問い合わせに追われなくなっただけでなく、ツアーから成約に至る割合も明確に上がりました。覆面調査で全項目満点が出たときは、正直驚きました。”
+        </blockquote>
+        <span class="quote-attr">— リーシングマネージャー（デモ用の想定コメントです）</span>
+      </section>
+    </section>
+
+    <!-- ---- AGENT: ANALYSIS ---- -->
+    <section id="agent-analysis" class="staff-screen">
+      <section class="panel coverage-panel">
+        <div class="panel-head">
+          <h2>対応カバレッジ Before / After（イメージ）</h2>
+          <span class="panel-note">概念図・実測値ではありません</span>
+        </div>
+        <p class="sim-desc">多くの賃貸管理会社では、問い合わせ対応は営業時間内（例: 平日9〜18時）に限られ、それ以外の時間帯は翌営業日回しになりがちです。Rowan Residential Groupでも同様の課題がありました（導入前の具体的な応答時間は非公開）。Kit導入後は、時間帯を問わず即時応答率100%を達成しています。下図は、対応可能な時間帯が導入前後でどう変わるかをイメージで示したものです。</p>
+        <div class="coverage-chart" id="coverageChart" aria-hidden="true"></div>
+        <div class="consistency-legend">
+          <span><i class="dot before"></i>導入前：日中の営業時間帯のみ対応（一般的な想定・イメージ）</span>
+          <span><i class="dot after"></i>導入後：24時間365日 Kitが即時応答（実績: 即時応答率100%）</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>内見予約が発生した時間帯の内訳</h2>
+          <span class="panel-note">90日間の実績</span>
+        </div>
+        <div class="split-bar-wrap">
+          <div class="split-bar">
+            <div class="split-bar-seg after" style="width:71%">時間外（AI対応）<strong>70〜72%</strong></div>
+            <div class="split-bar-seg biz" style="width:29%">営業時間内<strong>28〜30%</strong></div>
+          </div>
+        </div>
+        <p class="sim-caveat">※ 時間外に設定された内見予約の割合（70〜72%）が公表値です。営業時間内の割合は、その差分から算出した参考値です。</p>
+      </section>
+
+      <section class="panel sim-panel">
+        <div class="panel-head">
+          <h2>時間外予約 試算シミュレーター</h2>
+          <span class="panel-note">実績値をもとにした概算</span>
+        </div>
+        <p class="sim-desc">月間の内見予約件数を入力すると、公表されている時間外AI設定率（70〜72%）をもとに、そのうち何件が時間外に設定されるかの目安を試算します。</p>
+        <div class="sim-controls">
+          <label for="tourInput">月間の内見予約件数</label>
+          <input type="range" id="tourRange" min="5" max="300" value="40" step="1">
+          <input type="number" id="tourInput" min="1" max="2000" value="40">
+          <span class="sim-unit">件 / 月</span>
+        </div>
+        <div class="sim-result">
+          <span class="sim-result-label">時間外にAIが設定する内見予約の目安</span>
+          <span class="sim-result-value" id="simTours">約28〜29件</span>
+        </div>
+        <p class="sim-caveat">※ 海外の導入事例（時間外予約シェア70〜72%）をもとにした参考値です。実際の比率は物件・時期・エリアにより変動します。</p>
+      </section>
+
+      <section class="panel mystery-panel">
+        <div class="panel-head">
+          <h2>覆面調査（ミステリーショップ）評価</h2>
+          <span class="panel-note">導入後の実績値</span>
+        </div>
+        <p class="sim-desc">第三者による覆面調査で、リード対応の4項目すべてが100点満点でした。導入前を同一基準で評価したデータは公表されていないため、実績のみを掲載しています。</p>
+        <div class="mystery-bars" id="mysteryBars"></div>
+      </section>
+    </section>
+
+    <!-- ---- AGENT: SETTINGS ---- -->
+    <section id="agent-settings" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>物件ごとの導入設定</h2>
+          <span class="panel-note">見た目の操作のみ（デモ）</span>
+        </div>
+        <p class="reassure-note">通常は本部・エリアマネージャーが設定する画面です。現場のリーシング担当者が日常的に触れる場面は多くありません。</p>
+        <div class="table-wrap">
+          <table class="settings-table">
+            <thead>
+              <tr><th>物件</th><th>Kit連携</th><th>Lea Light連携</th><th>状態</th></tr>
+            </thead>
+            <tbody id="propertySettingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>通知設定</h2>
+          <span class="panel-note">リーシング担当者向け</span>
+        </div>
+        <ul class="toggle-list">
+          <li>
+            <div><strong>時間外の内見予約が入ったら通知</strong><span class="toggle-desc">Kitが予約を設定したタイミングでお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleTour"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>覆面調査の結果が更新されたら通知</strong><span class="toggle-desc">最新のミステリーショップ評価が届いたらお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleShop"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>Lea Light連携エラーを通知</strong><span class="toggle-desc">反響の振り分けに問題があれば即時にお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleError"><span class="slider"></span></label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、米国の集合住宅管理会社におけるAIバーチャルリーシングアシスタント導入事例（Funnel社「Kit」・Apartment List社「Lea Light」）をもとに構成した架空のシミュレーションです。登場する企業名「Rowan Residential Group」、物件名「Harborcrest Apartments」「Willowbrook Commons」ほか、人物・チャット内容・画面上の一部数値はすべて仮のものであり、実在の組織・個人とは関係ありません。AIベンダー名・プロダクト名（Funnel／Kit／Apartment List／Lea Light）は実際の名称です。即時応答率100%、時間外内見予約シェア70〜72%、ツアー→成約転換率+50%、覆面調査の全項目満点は公表されている実績です。時間削減・コスト削減・入居率など、元事例で公表されていない数値は本デモでは記載していません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
