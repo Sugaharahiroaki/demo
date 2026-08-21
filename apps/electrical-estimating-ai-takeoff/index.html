@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quotr.ai 導入デモ | Ridgeline Electric Co.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">R</span>
+    <div>
+      <div class="brand-name">Ridgeline Electric Co.</div>
+      <div class="brand-sub">AIテイクオフツール「Quotr.ai」導入デモ</div>
+    </div>
+  </div>
+  <nav class="persona-switch" role="tablist" aria-label="表示モード切替">
+    <button class="tab active" data-persona="genba" role="tab" aria-selected="true">現場監督向け</button>
+    <button class="tab" data-persona="hachu" role="tab" aria-selected="false">発注者・元請け担当者向け</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PERSONA A: SITE SUPERVISOR VIEW ============ -->
+  <section id="view-genba" class="view active">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">米国の小規模電気工事業者の導入事例をもとにしたデモ</p>
+        <h1>見積の下準備が20時間から1〜2時間に。<br>現場にとっての意味は「取れる仕事が増える」こと。</h1>
+        <p class="lede">Quotr.aiを実際に操作するのは事務所の見積担当ですが、その効果は現場にも及びます。テイクオフ（図面からの数量拾い出し）が速くなる分、会社として応札できる件数が増え、仕事が途切れにくくなります。数量の見落としが減れば、現場での急な追加発注や手戻りも起きにくくなります。</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-num">20h→1-2h</span><span class="trust-label">テイクオフ所要時間</span></div>
+          <div class="trust-item"><span class="trust-num">約90%減</span><span class="trust-label">作業時間の削減幅</span></div>
+          <div class="trust-item"><span class="trust-num">95-99%</span><span class="trust-label">記号認識精度（クリーンなベクターPDF）</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring-frame">
+          <div class="ring-glow"></div>
+          <svg viewBox="0 0 24 24" class="ring-icon"><path d="M11 2v6.17L6.83 4 5.41 5.41 10.59 10.59H2v2h8.59L5.41 17.59 6.83 19 11 14.83V21h2v-6.17L17.17 19l1.42-1.41L13.41 12.59H22v-2h-8.59l5.18-5.18L17.17 4 13 8.17V2h-2z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel known-panel">
+      <div class="panel-head">
+        <h2>この事例で分かっていること／非公開のこと</h2>
+      </div>
+      <div class="known-grid">
+        <div class="known-col known-yes">
+          <span class="known-col-title">✓ 分かっている事実</span>
+          <ul>
+            <li>手作業で約20時間かかっていたテイクオフが、Quotr.ai導入後は1〜2時間に短縮（約90%減）</li>
+            <li>清潔なベクター形式のPDF図面では、電気記号の自動認識精度は95〜99%</li>
+            <li>見積担当を増員せずに、対応できる入札件数を増やすことが可能になったと報告されている</li>
+          </ul>
+        </div>
+        <div class="known-col known-no">
+          <span class="known-col-title">— 非公開・不明な情報</span>
+          <ul>
+            <li>コスト削減額（金額ベースの数値は非公開）</li>
+            <li>売上・成約率への影響（具体的な数値は非公開）</li>
+            <li>スキャン画像や手書き図面での認識精度（数値の公表なし）</li>
+          </ul>
+          <p class="known-note">本デモでは、公表されていない数字を作らず、分かっている事実だけを根拠にご判断いただけるように構成しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel challenge-panel">
+      <h2>導入前の課題</h2>
+      <p>図面からコンセント・照明器具・パネル・配管・スイッチなどの数量をひとつずつ手で数える「テイクオフ」作業に、平均で<strong>20時間</strong>かかっていました。小規模な電気工事業者では見積担当が1〜2名ということも珍しくなく、この作業に時間を取られるほど<strong>対応できる入札件数が頭打ちになり、応札そのものを見送らざるを得ない</strong>ケースもありました。</p>
+    </section>
+
+    <section class="panel meaning-panel">
+      <div class="panel-head">
+        <h2>現場にとっての意味</h2>
+        <span class="panel-note">操作するのは事務所ですが、効果は現場に届きます</span>
+      </div>
+      <div class="meaning-grid">
+        <div class="meaning-card">
+          <span class="meaning-icon" aria-hidden="true">📋</span>
+          <h3>受注できる仕事が増える</h3>
+          <p>同じ人数の見積担当で対応できる入札件数が増えれば、会社として取れる仕事が増えます。現場の仕事が途切れにくくなるということです。</p>
+        </div>
+        <div class="meaning-card">
+          <span class="meaning-icon" aria-hidden="true">📦</span>
+          <h3>数量の見落としが減る</h3>
+          <p>AIが記号ごとに機械的にカウントするため、数え漏れが減る可能性があります。数量の精度が上がれば、現場での急な追加発注や材料待ちによる手戻りも起きにくくなります。</p>
+        </div>
+        <div class="meaning-card">
+          <span class="meaning-icon" aria-hidden="true">👥</span>
+          <h3>増員なしで対応</h3>
+          <p>見積担当を増やさずに対応できる入札件数を増やせる可能性があります。会社の体制を大きく変えずに、受けられる仕事の幅を広げられるということです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel flow-panel">
+      <div class="panel-head">
+        <h2>誰が、何をしているか</h2>
+        <span class="panel-note">「AIが入札を決める」わけではありません</span>
+      </div>
+      <ol class="steps-vertical">
+        <li><span class="step-num">1</span><div><strong>元請けから図面を受け取る</strong> — 営業・現場側の窓口が入札案件の図面一式を受け取ります。</div></li>
+        <li><span class="step-num">2</span><div><strong>見積担当がQuotr.aiにPDF図面をアップロード</strong> — 事務所での作業です。現場に新しい操作が増えるわけではありません。</div></li>
+        <li><span class="step-num">3</span><div><strong>AIが電気記号を自動認識してカウント</strong> — コンセント種別・器具クラス・パネル表記・配管記号・スイッチ種別を、確信度スコア付きで数分以内に拾い出します。</div></li>
+        <li><span class="step-num">4</span><div><strong>見積担当が数量を確認し、入札書類を作成</strong> — 最終的な数量・入札額の判断は必ず人（見積担当）が行います。</div></li>
+      </ol>
+      <a class="link-cta" href="#" data-goto-hachu="takeoff">実際の画面イメージを見る（発注者・元請け担当者向け画面）→</a>
+    </section>
+
+    <section class="quote-panel">
+      <blockquote>
+        “以前は「今月はこの件数までしか見積を出せない」と最初から入札を絞っていました。テイクオフが数時間で終わるようになってからは、声がかかった案件にできるだけ応じられるようになり、現場が仕事を選べないほど途切れる心配が減りました。”
+      </blockquote>
+      <span class="quote-attr">— 現場責任者（デモ用の想定コメントです）</span>
+    </section>
+
+    <section class="panel safety-panel">
+      <h2>安全性・業務範囲について</h2>
+      <ul class="safety-list">
+        <li>Quotr.aiは<strong>図面上の数量拾い出し（テイクオフ）を補助するもの</strong>であり、施工内容・現場の安全管理には一切関与しません。</li>
+        <li>AIが出した数量はあくまで下書きであり、<strong>入札額・最終数量の判断は必ず有資格の見積担当者が確認</strong>します。AIが単独で入札を確定させることはありません。</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- ============ PERSONA B: OWNER / GC REPRESENTATIVE VIEW ============ -->
+  <section id="view-hachu" class="view">
+
+    <section class="staff-head">
+      <div>
+        <p class="eyebrow">取引先の見積プロセスを支えるAIテイクオフツール</p>
+        <h1>Quotr.aiで、テイクオフ作業がどう変わるか</h1>
+        <p class="lede">図面をアップロードすると、AIが電気記号を自動認識して数量をカウントします。精度・所要時間ともに実績値に基づいて構成したデモです。下の画面を実際に操作して体験してください。</p>
+      </div>
+    </section>
+
+    <nav class="screen-switch" role="tablist" aria-label="画面切替">
+      <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">ホーム</button>
+      <button class="screen-tab" data-screen="takeoff" role="tab" aria-selected="false">AIテイクオフ体験</button>
+      <button class="screen-tab" data-screen="analytics" role="tab" aria-selected="false">分析</button>
+      <button class="screen-tab" data-screen="simulator" role="tab" aria-selected="false">削減シミュレーター</button>
+      <button class="screen-tab" data-screen="settings" role="tab" aria-selected="false">設定</button>
+    </nav>
+
+    <!-- ---- HACHU: HOME ---- -->
+    <section id="hachu-home" class="staff-screen active">
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <span class="stat-label">テイクオフ所要時間</span>
+          <span class="stat-value">20h→1-2h</span>
+          <span class="stat-delta up">約90%の作業時間削減（実績）</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">記号認識精度</span>
+          <span class="stat-value">95<span class="stat-unit">〜</span>99<span class="stat-unit">%</span></span>
+          <span class="stat-delta">清潔なベクターPDF図面での実績値</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">対応体制</span>
+          <span class="stat-value">増員なし</span>
+          <span class="stat-delta up">対応できる入札件数を増やせる可能性</span>
+        </div>
+      </div>
+
+      <div class="panel known-panel">
+        <div class="panel-head">
+          <h2>この事例で分かっていること／非公開のこと</h2>
+        </div>
+        <div class="known-grid">
+          <div class="known-col known-yes">
+            <span class="known-col-title">✓ 分かっている事実</span>
+            <ul>
+              <li>テイクオフ作業が20時間から1〜2時間に短縮（約90%減）</li>
+              <li>清潔なベクターPDF図面で95〜99%の記号認識精度</li>
+              <li>見積担当を増員せずに対応できる入札件数を増やすことが可能に</li>
+            </ul>
+          </div>
+          <div class="known-col known-no">
+            <span class="known-col-title">— 非公開・不明な情報</span>
+            <ul>
+              <li>コスト削減額（金額ベースの数値は非公開）</li>
+              <li>売上・成約率への影響（数値は非公開）</li>
+              <li>スキャン画像・手書き図面での認識精度</li>
+            </ul>
+            <p class="known-note">本デモは、公表されている事実と、それをもとにした試算・イメージを明確に分けて表示しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>この画面で確認できること</h2>
+          <span class="panel-note">発注者・元請け企業の担当者様へ</span>
+        </div>
+        <ol class="steps-vertical">
+          <li><span class="step-num">1</span><div><strong>AIテイクオフ体験</strong> — 図面をアップロードし、AIが電気記号を自動認識・カウントする様子を体験できます。</div></li>
+          <li><span class="step-num">2</span><div><strong>分析</strong> — 導入前後の所要時間をBefore/Afterで比較し、精度の実績値を確認できます。</div></li>
+          <li><span class="step-num">3</span><div><strong>削減シミュレーター</strong> — 月間の見積案件数を入力し、削減時間と追加対応可能な件数の目安を試算します。</div></li>
+          <li><span class="step-num">4</span><div><strong>設定</strong> — 認識対象の記号カテゴリや確信度のしきい値など、運用イメージを確認できます。</div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---- HACHU: TAKEOFF DEMO ---- -->
+    <section id="hachu-takeoff" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>図面を選ぶ</h2>
+          <span class="panel-note">デモ用の仮想図面です</span>
+        </div>
+        <div class="case-picker" id="casePicker">
+          <button type="button" class="case-btn active" data-case="panel">住宅用パネル図</button>
+          <button type="button" class="case-btn" data-case="outlet">商業ビル コンセント配置図</button>
+          <button type="button" class="case-btn" data-case="lighting">照明・スイッチ配線図</button>
+        </div>
+      </div>
+
+      <div class="analysis-layout">
+        <div class="panel drawing-panel">
+          <div class="panel-head">
+            <h2>図面（PDF）</h2>
+            <span class="panel-note" id="drawingStatus">未アップロード</span>
+          </div>
+          <div class="drawing-frame" id="drawingFrame">
+            <div class="drawing-placeholder" id="drawingPlaceholder">
+              <svg viewBox="0 0 24 24" class="upload-icon"><path d="M12 3l5 5h-3v6h-4V8H7l5-5zM5 19h14v2H5v-2z"/></svg>
+              <p>まだ図面がアップロードされていません</p>
+              <button type="button" class="btn-primary" id="uploadBtn">PDF図面をアップロード</button>
+            </div>
+            <div class="drawing-view" id="drawingView" hidden>
+              <svg viewBox="0 0 320 200" class="blueprint-svg" id="blueprintSvg" aria-label="図面のイメージ図">
+                <rect x="0" y="0" width="320" height="200" fill="#132430"></rect>
+                <g id="gridLines" stroke="#28495c" stroke-width="1" opacity="0.6"></g>
+                <g id="symbolLayer"></g>
+                <g id="markerLayer"></g>
+              </svg>
+              <button type="button" class="btn-secondary" id="analyzeBtn">AIに電気記号を認識させる</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel results-panel">
+          <div class="panel-head">
+            <h2>AI認識結果（数量カウント）</h2>
+            <span class="panel-note">最終確認は見積担当が行います</span>
+          </div>
+          <p class="reassure-note">AIは図面上の記号を種類ごとに自動でカウントし、それぞれに確信度スコアを付けます。しきい値を下回る項目は「要確認」として見積担当のレビューに回るため、AIの認識結果がそのまま入札書類になるわけではありません。</p>
+          <ul class="findings-list" id="findingsList">
+            <li class="findings-empty">図面をアップロードし「AIに電気記号を認識させる」を押すと、ここに集計結果が表示されます。</li>
+          </ul>
+          <div class="confidence-summary" id="confidenceSummary" hidden>
+            <span class="confidence-summary-label">この図面の平均確信度</span>
+            <span class="confidence-summary-value" id="confidenceSummaryValue">—</span>
+            <span class="confidence-summary-note">清潔なベクターPDFのため、実績レンジ（95〜99%）内のサンプル値です</span>
+          </div>
+
+          <div class="review-row" id="reviewRow" hidden>
+            <button type="button" class="btn-secondary" id="reviewBtn">見積担当レビュー完了としてマーク（デモ）</button>
+            <span class="review-status" id="reviewStatus"></span>
+          </div>
+
+          <div class="summary-note" id="summaryNote" hidden>
+            <div class="panel-head">
+              <h3>テイクオフ完了メモ</h3>
+            </div>
+            <p id="summaryNoteText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- HACHU: ANALYTICS ---- -->
+    <section id="hachu-analytics" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>テイクオフ所要時間 Before / After</h2>
+          <span class="panel-note">実績値</span>
+        </div>
+        <p class="sim-desc">1件の図面セットあたりのテイクオフ（数量拾い出し）にかかる時間です。Quotr.ai導入前は手作業で平均20時間、導入後は1〜2時間に短縮したと報告されています。</p>
+        <div class="ba-chart" aria-hidden="true">
+          <div class="ba-row">
+            <span class="ba-row-label">導入前</span>
+            <div class="ba-track"><div class="ba-bar before" style="width:100%"></div></div>
+            <span class="ba-row-value">20時間</span>
+          </div>
+          <div class="ba-row">
+            <span class="ba-row-label">導入後</span>
+            <div class="ba-track"><div class="ba-bar after" style="width:9%"></div></div>
+            <span class="ba-row-value ba-row-value-good">1〜2時間</span>
+          </div>
+        </div>
+        <div class="ba-callout">約90%の作業時間削減（20時間 → 1〜2時間）</div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>記号認識精度</h2>
+          <span class="panel-note">清潔なベクターPDF図面での実績</span>
+        </div>
+        <div class="precision-row">
+          <div class="precision-gauge" aria-hidden="true">
+            <svg viewBox="0 0 120 70" class="gauge-svg">
+              <path d="M10 65 A50 50 0 0 1 110 65" fill="none" stroke="#e1e4e8" stroke-width="10" stroke-linecap="round"></path>
+              <path d="M10 65 A50 50 0 0 1 110 65" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="7.85"></path>
+              <defs>
+                <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#b5651d"></stop>
+                  <stop offset="100%" stop-color="#227a4b"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="gauge-value">95〜99%</span>
+          </div>
+          <div class="precision-text">
+            <p>コンセント種別・器具クラス・パネル表記・配管記号・スイッチ種別といった電気記号を、確信度スコア付きで自動認識します。清潔なベクター形式のPDF図面では95〜99%の精度が実績として報告されています。</p>
+            <p class="precision-caveat">※ スキャン画像や手書きが含まれる図面では精度が下がる場合がありますが、その具体的な数値は公表されていません。確信度が低い項目は自動で「要確認」に振り分けられ、見積担当が目視で確認する運用が前提です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>非公開・不明な指標について</h2>
+        </div>
+        <p class="sim-desc">この事例では、コスト削減額・売上や成約率への影響を示す具体的な数値は公表されていません。本デモでは、ない数字を作らず、時間削減と認識精度という公表されている実績のみを根拠にしています。</p>
+      </div>
+    </section>
+
+    <!-- ---- HACHU: SIMULATOR ---- -->
+    <section id="hachu-simulator" class="staff-screen">
+      <div class="panel speed-sim">
+        <div class="panel-head">
+          <h2>削減シミュレーター</h2>
+          <span class="panel-note">実績値をもとにした概算</span>
+        </div>
+        <p class="sim-desc">貴社（または取引先）の月間の見積案件数（テイクオフを行う図面セット数）を入力すると、実績の時間削減率（20時間→1〜2時間）をもとに、削減時間と追加対応可能な案件数の目安を試算します。</p>
+        <div class="sim-controls">
+          <label for="jobInput">月間の見積案件数</label>
+          <input type="range" id="jobRange" min="1" max="60" value="8" step="1">
+          <input type="number" id="jobInput" min="1" max="200" value="8">
+          <span class="sim-unit">件／月</span>
+        </div>
+        <div class="sim-result-grid">
+          <div class="sim-result">
+            <span class="sim-result-label">月間の削減時間</span>
+            <span class="sim-result-value" id="simHoursSaved">—</span>
+          </div>
+          <div class="sim-result">
+            <span class="sim-result-label">稼働日換算（1日8時間）</span>
+            <span class="sim-result-value" id="simDaysSaved">—</span>
+          </div>
+          <div class="sim-result">
+            <span class="sim-result-label">追加対応可能な案件数の目安</span>
+            <span class="sim-result-value" id="simExtraJobs">—</span>
+          </div>
+        </div>
+        <p class="sim-caveat">※ 削減時間 = 案件数 ×（従来20時間 − 導入後1.5時間[1〜2時間の中間値]）で算出。追加対応可能な案件数は、削減時間を「従来1件あたりの所要時間（20時間）」で割った保守的な目安です。実際に対応できる件数は、人員体制・案件の難易度・受注状況などにより変動し、売上や成約率の増加を保証するものではありません。</p>
+      </div>
+    </section>
+
+    <!-- ---- HACHU: SETTINGS ---- -->
+    <section id="hachu-settings" class="staff-screen">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>認識対象の記号カテゴリ</h2>
+          <span class="panel-note">見た目の操作のみ（デモ）</span>
+        </div>
+        <p class="reassure-note">Quotr.aiが自動認識する電気記号のカテゴリです。案件の種類に応じて対象を絞り込むイメージを確認できます。</p>
+        <div class="table-wrap">
+          <table class="settings-table">
+            <thead>
+              <tr><th>記号カテゴリ</th><th>内容</th><th>自動認識</th></tr>
+            </thead>
+            <tbody id="categorySettingsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>確信度のしきい値</h2>
+          <span class="panel-note">要確認に振り分ける基準（デモ）</span>
+        </div>
+        <p class="reassure-note">確信度がこの値を下回った記号は、自動で「要確認」として見積担当のレビューに回ります。しきい値を上げるほど、人による目視確認の対象が増えます。</p>
+        <div class="sim-controls">
+          <label for="thresholdRange">しきい値</label>
+          <input type="range" id="thresholdRange" min="70" max="99" value="90" step="1">
+          <span class="sim-unit" id="thresholdValue">90%</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>通知設定</h2>
+          <span class="panel-note">見積担当向け</span>
+        </div>
+        <ul class="toggle-list">
+          <li>
+            <div><strong>図面アップロード完了を通知</strong><span class="toggle-desc">AIによる自動認識が開始されたタイミングでお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleUpload"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>要確認項目の発生を通知</strong><span class="toggle-desc">確信度がしきい値を下回る記号が見つかった場合にお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleReview"><span class="slider"></span></label>
+          </li>
+          <li>
+            <div><strong>テイクオフ完了を通知</strong><span class="toggle-desc">見積担当のレビューが完了し、入札書類作成に進める状態になったらお知らせします</span></div>
+            <label class="switch"><input type="checkbox" checked id="toggleComplete"><span class="slider"></span></label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>本デモは、米国の小規模電気工事専門業者におけるAIテイクオフツール「Quotr.ai」導入事例をもとに構成した架空のシミュレーションです。登場する企業名「Ridgeline Electric Co.」・人物・図面ケース・画面上の一部数値（確信度のサンプル値、シミュレーターの試算結果など）はすべてデモ用の仮のものであり、実在の企業・個人とは関係ありません。テイクオフ所要時間の短縮（20時間→1〜2時間）および清潔なベクターPDFでの記号認識精度（95〜99%）は公表されている実績値ですが、コスト削減額・売上や成約率への影響・スキャン画像や手書き図面での精度は非公開のため、本デモでは数値を記載していません。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
