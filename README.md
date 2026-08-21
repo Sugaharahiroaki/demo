@@ -19,3 +19,4 @@
 | [apps/ai-leasing-assistant-kit](apps/ai-leasing-assistant-kit) | 不動産管理・仲介 | 集合住宅管理会社（米国／Funnel「Kit」）－AIバーチャルリーシングアシスタントで時間外の内見予約を自動化 |
 | [apps/harvey-ai-dispute-case-review](apps/harvey-ai-dispute-case-review) | 税理士・社労士・法律事務所 | 建設紛争コンサルティング会社（グローバル200名超／Harvey AI）－ケース処理能力35%増、レビュー日数を短縮 |
 | [apps/electrical-estimating-ai-takeoff](apps/electrical-estimating-ai-takeoff) | 建設・専門工事 | 電気工事専門業者（米国／Quotr.ai）－AIテイクオフでテイクオフ作業を20時間→1〜2時間に短縮 |
+| [apps/harvey-ai-law-firm-efficiency](apps/harvey-ai-law-firm-efficiency) | 税理士・社労士・法律事務所 | 中規模法律事務所（米国／Harvey AI）－弁護士1人あたり週7〜10時間超を削減 |
